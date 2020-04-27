@@ -11,6 +11,7 @@ $gray-medium-light:#eaeaea;
 }
 body {
   padding-top: 60px;
+  background-color: $gray-medium-light;
 }
 
 section {
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   h1 {
-    font-size: 3em;
+    font-size: 4em;
     letter-spacing: -2px;
     margin-bottom: 30px;
     text-align: center;
@@ -77,41 +78,20 @@ h1, h2, h3, h4, h5, h6 {
   /* footer */
 
 footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #777;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: $gray-light;
+    font-weight: bold;
+    text-align: center;
+    height: 4%;
   }
+.footer-copyright {
+  margin-top: 12px;
+}
   
-  footer a {
-    color: #555;
-  }
-  
-  footer a:hover {
-    color: #222;
-  }
-  
-  footer small {
-    float: left;
-  }
-  
-  footer ul {
-    float: right;
-    list-style: none;
-  }
-  
-  footer ul li {
-    float: left;
-    margin-left: 15px;
-  }
-
-  .debug_dump{
-    clear:both;
-    float:left;
-    width:100%;
-    margin-top:45px;
-    @include box_sizing;
-  }
  
   /* forms */
   input,textarea,select,.uneditable-input{
@@ -139,4 +119,14 @@ footer {
   .form-control{
     color: $state-danger-text!important;
   }
+}
+
+.custom_link{
+  float: right;
+  margin-right: 30px;
+}
+
+.container{
+  background-color: white;
+  width: 750px;
 }
