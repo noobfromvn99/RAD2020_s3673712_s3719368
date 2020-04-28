@@ -1,20 +1,37 @@
+<% provide(:title , @user.name) %>
 <br>
 <%# recent users %>
 <div class="container" style="padding:0; width:300px;">
 <div class="card">
     <div class="card-body">
     <h4 class="card-title"> Recent Members </h4>
-    <p class="card-text">Some User here</p>
+    <p style="padding: 5px 15px 5px"> 
+    <strong> 
+    <% User.all.each do |user| %>
+    <a style="padding: 5px 15px 5px"><%= user.name %></a>
+    <% end %></strong>
+    </p>
     </div>
 </div>
 </div>
 <br><br>
-<%# recent users %>
+<%# topic %>
 <div class="container" style="padding:0; width:300px;">
 <div class="card">
     <div class="card-body">
     <h4 class="card-title"> Topic </h4>
-    <p class="card-text">Some topics</p>
+    <p style="padding: 5px 15px 5px">
+    <a href="#" class="badge">RMIT</a>
+    <a href="#" class="badge">A.I.</a>
+    <a href="#" class="badge">V.R.</a>
+    <a href="#" class="badge">Ruby</a>
+    <a href="#" class="badge">Web</a>
+    <a href="#" class="badge">UI</a>
+    <a href="#" class="badge">Australia</a>
+    <a href="#" class="badge">Vietnam</a>
+    <a href="#" class="badge">China</a>
+    <a href="#" class="badge">HelloWorld</a>
+    </p>
     </div>
 </div>
 </div>
@@ -29,12 +46,17 @@
 </div>
 </div>
 <br><br>
-<%# recent users %>
+<%# Links %>
 <div class="container" style="padding:0; width:300px;">
 <div class="card">
     <div class="card-body">
     <h4 class="card-title"> Links </h4>
-    <p class="card-text">Some User here</p>
+    <p style="padding: 5px 15px 5px">
+    <a href="https://www.rmit.edu.au/" class="badge">RMIT</a>
+    <a href="https://rubyonrails.org/" class="badge">Rails</a>
+    <a href="https://rmit.instructure.com/" class="badge">Canvas</a>
+    <a href="https://github.com/noobfromvn99/RAD2020_s3673712_s3719368" class="badge">git</a>
+    </p>
     </div>
 </div>
 </div>

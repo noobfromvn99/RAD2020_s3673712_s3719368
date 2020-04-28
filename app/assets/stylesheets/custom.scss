@@ -97,7 +97,17 @@ footer {
 .footer-copyright {
   margin-top: 12px;
 }
-  
+  /* side bar */
+.badge{
+  border:1px solid lightgray;
+  padding: 5px 20px 5px;
+  background-color: white;
+  color: gray;
+  margin: 10px
+}
+.badge:hover{
+  background-color: darkgray;
+}
  
   /* forms */
   input,textarea,select,.uneditable-input{
