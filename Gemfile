@@ -3,6 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.7'
 
+
+#jquery
+gem 'jquery-rails'
+gem 'rails-ujs', '~> 0.1.0'
+#cookie
+gem 'js_cookie_rails'
+
 # boostrap
 gem 'bootstrap-sass', '3.3.7'
 
