@@ -1,0 +1,14 @@
+<% provide(:title , "Home") %>
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+ <div class="row justify-content-md-center">
+
+  <%= @posts.each do |post| %>
+    <div class="col col-lg-2">
+      <%= @post.title %>
+    </div>
+   <% end %>  
+
+ </div>
+</div>
