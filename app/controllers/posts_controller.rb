@@ -5,7 +5,7 @@ class PostsController < ApplicationController
       redirect_to root_url
     else
       @user = current_user
-      @post = Post.find(params[:id])
+      @post = Post.new
     end
   end
 
@@ -22,6 +22,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    uid = @post.user_id #find author ID
+
+    @user = User.find(uid)
   end
 
   private
