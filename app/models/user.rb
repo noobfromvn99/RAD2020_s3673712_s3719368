@@ -10,6 +10,13 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { minimum: 6 }
     VALID_MOBILE_REGEX = /\d/
     validates :mobile, presence: true,
-               length: { maximum: 10},
-               format: { with: VALID_MOBILE_REGEX }           
+               length: { minimum:10, maximum: 10},
+               format: { with: VALID_MOBILE_REGEX } 
+    has_many :posts, dependent: :destroy
+
+    def User.digest(string)
+        cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                            BCrypt::Engine.cost
+        BCrypt::Password.create(string, cost: cost)
+    end
 end

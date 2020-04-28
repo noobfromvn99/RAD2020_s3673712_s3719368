@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Topic.destroy_all
+RMIT = Topic.create!(name:"RMIT")
+VR = Topic.create!(name:"V.R.")
+AI = Topic.create!(name:"A.I.")

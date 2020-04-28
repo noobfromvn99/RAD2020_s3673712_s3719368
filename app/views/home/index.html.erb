@@ -1,0 +1,21 @@
+<% provide(:title , "Home") %>
+<div class="col-sm-12">
+<nav>
+  <ul class="nav navbar-nav postbar">
+    <li><%= link_to "Recent Post",   '#' %></li>
+    <li><%= link_to "Selected Post",   '#' %></li>
+    <li><%= link_to "My Setting", '#' %></li>
+    
+   
+  </ul>
+  <div class="col-sm-4">
+  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+  </div>
+  <button class="btn btn-success"  style="float:right" >New Post</button>
+</nav>
+</div>
+<p>
+  <%= @posts.each do |post| %>
+      <%= post.title %><br>
+  <% end %> 
+ </p> 

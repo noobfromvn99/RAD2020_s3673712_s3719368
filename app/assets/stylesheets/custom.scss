@@ -108,7 +108,23 @@ footer {
 .badge:hover{
   background-color: darkgray;
 }
- 
+/* Post */
+
+.postbar{
+  background-color: white;
+  
+}
+.postbar li{
+  color: black;
+  border: 1px solid $gray-medium-light;
+}
+.postbar li:hover{
+  background-color: white;
+  color: red;
+}
+.postbar li:active{
+  color: red;
+}
   /* forms */
   input,textarea,select,.uneditable-input{
     border:1pxsolid#bbb;
