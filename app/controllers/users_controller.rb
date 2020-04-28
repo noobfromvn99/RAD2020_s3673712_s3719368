@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  layout "form"
+  layout :resolve_layout
   def new
     @user = User.new
   end
@@ -18,10 +18,22 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+    private
+
    def user_params
     params.require(:user).
       permit(:name,:email,:mobile,:password,:password_confirmation)
    end
+
+   private
+
+  def resolve_layout
+    case action_name
+    when "new", "create"
+      "form"
+    else
+      "application"
+    end
+  end
 
 end
