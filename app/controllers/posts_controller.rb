@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  include PostsHelper
 
   def new
     if current_user == nil
@@ -23,7 +24,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     uid = @post.user_id #find author ID
-
+    @topic = getTopic(@post.topic_id)
     @user = User.find(uid)
   end
 
