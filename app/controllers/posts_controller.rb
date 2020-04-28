@@ -5,6 +5,7 @@ class PostsController < ApplicationController
       redirect_to root_url
     else
       @user = current_user
+      @post = Post.find(params[:id])
     end
   end
 
