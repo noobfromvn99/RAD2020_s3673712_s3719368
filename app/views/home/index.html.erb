@@ -1,7 +1,7 @@
 <% provide(:title , "Home") %>
 
 <div class="row">
-<div class="col-sm-12">
+  <div class="col-sm-12">
   <ul class="list-group list-group-horizontal-sm">
     <li class="list-group-item active" id="RecentPost"><%= link_to "Recent Post"   '#' %></li>
     <li class="list-group-item" id="SelectedPost"><%= link_to "Selected Post",   '#' %></li>
@@ -11,15 +11,15 @@
     <li class="list-group-input"> <input class="form-control" type="text" placeholder="Search" aria-label="Search"> </li>
   </div>
 </div>
-
-
-
-  
-</div>
-</div>
-
+<div class="row">
 <p>
   <% @posts.each do |post| %>
+      <div class="container-fluid post">
       <%= post.title %><br>
+      <%= @user.name %>
+      <%= post.created_at %>
+      <%= getTopic(post.topic_id) %>
+      </div>
   <% end %> 
  </p> 
+</div>

@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   layout :resolve_layout
   def new
+    if logged_in?
+      redirect_to index_path
+    end
+
     @user = User.new
   end
 
