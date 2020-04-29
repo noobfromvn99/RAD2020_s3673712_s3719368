@@ -17,3 +17,26 @@
 //= require jquery 
 //= require bootstrap
 //= require js.cookie
+
+function select_tag(element){
+    var name = element;
+    var current_class = name.className;
+    if(current_class == "badge"){
+        name.className = "badge badge-pill badge-warning";
+    } else {
+        name.className = "badge";
+    }
+}
+
+
+function select_opt(element){
+    var name = element.parentElement;
+    var current_class = name.className;
+    if(current_class == "list-group-item"){
+        var active = document.getElementsByClassName("list-group-item active");
+        active[0].className = "list-group-item"
+        name.className = "list-group-item active";
+    } 
+
+}
+

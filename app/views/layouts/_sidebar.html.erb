@@ -22,7 +22,7 @@
     <h4 class="card-title"> Topic </h4>
     <p style="padding: 5px 15px 5px">
     <% @topics.each do |topic| %>   
-        <%= link_to topic.name, add_topic_path(:name => topic.name), class: "badge badge-danger"%>   
+        <%= link_to topic.name, add_topic_path(:name => topic.name), onclick: "select_tag(this)" ,class: "badge", remote: true%>   
     <% end %>
     </p>
     </div>
