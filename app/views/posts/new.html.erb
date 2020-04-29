@@ -1,30 +1,36 @@
-<% provide(:title ,@post.title) %>
+<% provide(:title ,"New post") %>
 <br>
 <h1>Post</h1>
 <br>
+<div class="container" style="background-color:transparent">
 
-<div class="input-group">
-  
+
+
+    <%= render'shared/error_messages' %>
 
     <%= form_for(Post.new) do |f| %>
-    <div class="form-group mb-2">
+     <div class="form-group row">
         <%= f.label :topic_id, class:"col-sm-2 col-form-label" %>
-        <%= f.collection_select :topic_id, Topic.all,:id,:name, class: "form-control" %>  
-    </div>
-    <%= f.hidden_field :user_id, :value => @user.id %>
-    <div class="form-group mb-2">
-      <%= f.label :title, class:"col-sm-2 col-form-label" %>
-        <%= f.text_field :title,  class: "form-control" %>  
+        <%= f.collection_select :topic_id, Topic.all,:id,:name,{}, {class: "form-control"} %>  
     </div>
 
-    <div class="form-group mb-2">
+    <%= f.hidden_field :user_id, :value => @user.id %>
+    <div class="form-group row">
+      <%= f.label :title, class:"col-sm-2 col-form-label" %>
+        <%= f.text_field :title,  class: 'form-control' %>  
+    </div>
+
+    <div class="form-group row">
         <%= f.label :content, class:"col-sm-2 col-form-label" %>
-        <%= f.text_field :content,  class: "form-control" %>  
+        <%= f.text_area :content,  class: 'form-control', :rows => 12 %>  
     </div>
 
 
     <div class = "col-md-10" style = "float: right;">
-      <%= f.submit "Post" ,class: "btn btn-success" %>
+      <%= f.submit "Post" ,class: 'btn btn-success' %>
     </div>
     <% end %>
 </div>
+
+
+

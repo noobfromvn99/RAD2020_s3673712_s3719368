@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   layout :resolve_layout
   def new
+    if logged_in?
+      redirect_to index_path
+    end
+
     @user = User.new
   end
 
@@ -12,6 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Success!"
+      log_in @user
       redirect_to @user
     else
       render 'new'
