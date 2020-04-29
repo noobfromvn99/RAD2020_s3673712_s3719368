@@ -1,0 +1,12 @@
+<p>
+  <% posts.each do |post| %>
+      <div class="container-fluid post">
+      <%= link_to post.title, post %><br>
+      <%= current_user.name %>
+      <%= post.created_at %>
+      <%= getTopic(post.topic_id) %>
+      <%= post.viewed %>
+      </div>
+  <% end %> 
+ </p> 
+ <p>

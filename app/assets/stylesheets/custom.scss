@@ -98,13 +98,7 @@ footer {
   margin-top: 12px;
 }
   /* side bar */
-.badge{
-  border:1px solid lightgray;
-  padding: 5px 20px 5px;
-  background-color: white;
-  color: gray;
-  margin: 10px
-}
+
 .badge:hover{
   background-color: darkgray;
 }
@@ -193,3 +187,12 @@ footer {
   float:right;
 }
 
+.badge-warning{
+    color: #212529;
+    background-color: #ffc107;
+}
+.badge-pill {
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem;
+}
