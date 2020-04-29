@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2020_04_28_130505) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
-    t.bigint "topic_id"
+    t.string "user_id", null: false
+    t.bigint "topic_id", null: false
     t.index ["topic_id"], name: "index_posts_on_topic_id"
   end
 

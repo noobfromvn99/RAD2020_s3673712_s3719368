@@ -145,6 +145,15 @@ footer {
     }
   }
 
+  ul.list-group:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+  
+  .list-group-item {
+      float: left;
+  }
   
 .field_with_errors{
   @extend .has-error;
@@ -162,3 +171,22 @@ footer {
   background-color: white;
   width: 750px;
 }
+
+.list-group-item.active a
+{
+  color:whitesmoke
+}
+
+.list-group-button
+{
+  list-style-type:none;
+  margin-left: 15px;
+  float:right;
+}
+
+.list-group-input
+{
+  list-style-type:none;
+  float:right;
+}
+
