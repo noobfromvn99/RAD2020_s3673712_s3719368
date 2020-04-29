@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 
   def create
     @user = current_user
+
     @post = @user.posts.create(post_params)
     if @post.save
       flash[:success] = "Success!"
@@ -23,6 +24,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    increaseViewed(@post)
     uid = @post.user_id #find author ID
     @topic = getTopic(@post.topic_id)
     @user = User.find(uid)
