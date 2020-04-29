@@ -17,11 +17,3 @@
 //= require jquery 
 //= require bootstrap
 //= require js.cookie
-
-function selctPost(filter){
-
-    var elementToActive = document.getElementById(filter);
-    var ActivtingElement = document.getElementsByClassName('list-group-item active');
-    elementToActive.className = "list-group-item active";
-    ActivtingElement.className= "list-group-item";
-}

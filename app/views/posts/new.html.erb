@@ -8,7 +8,7 @@
 
     <%= render'shared/error_messages' %>
 
-    <%= form_for(Post.new) do |f| %>
+    <%= form_for(@post) do |f| %>
      <div class="form-group row">
         <%= f.label :topic_id, class:"col-sm-2 col-form-label" %>
         <%= f.collection_select :topic_id, Topic.all,:id,:name,{}, {class: "form-control"} %>  

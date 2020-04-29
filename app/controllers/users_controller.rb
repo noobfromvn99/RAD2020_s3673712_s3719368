@@ -24,14 +24,12 @@ class UsersController < ApplicationController
   end
 
     private
-
    def user_params
     params.require(:user).
       permit(:name,:email,:mobile,:password,:password_confirmation)
    end
 
    private
-
   def resolve_layout
     case action_name
     when "new", "create"
