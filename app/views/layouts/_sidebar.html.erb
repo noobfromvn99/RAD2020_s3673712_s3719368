@@ -1,0 +1,58 @@
+<% provide(:title , current_user.name) %>
+<div class="col col-lg-2">
+<br>
+<%# recent users %>
+<div class="container" style="padding:0; width:300px;">
+<div class="card">
+    <div class="card-body">
+    <h4 class="card-title"> Recent Members </h4>
+    <p style="padding: 5px 15px 5px"> 
+    <strong> 
+    <% User.all.each do |user| %>
+        <a style="padding: 5px 15px 5px"><%= user.name %></a>
+    <% end %></strong>
+    </p>
+    </div>
+</div>
+</div>
+<br><br>
+<%# topic %>
+<div class="container" style="padding:0; width:300px;">
+<div class="card">
+    <div class="card-body">
+    <h4 class="card-title"> Topic </h4>
+    <p style="padding: 5px 15px 5px">
+    <% @topics.each do |topic| %>   
+        <%= link_to topic.name, add_topic_path(:name => topic.name), onclick: "select_tag(this)" ,class: "badge", remote: true%>   
+    <% end %>
+    </p>
+    </div>
+</div>
+</div>
+<br><br>
+<%# recent users %>
+<div class="container" style="padding:0; width:300px;">
+<div class="card">
+    <div class="card-body">
+    <h4 class="card-title"> Post </h4>
+    <p class="card-text">Some most view post</p>
+    </div>
+</div>
+</div>
+<br><br>
+<%# Links %>
+<div class="container" style="padding:0; width:300px;">
+<div class="card">
+    <div class="card-body">
+    <h4 class="card-title"> Links </h4>
+    <p style="padding: 5px 15px 5px">
+    <a href="https://www.rmit.edu.au/" class="badge">RMIT</a>
+    <a href="https://rubyonrails.org/" class="badge">Rails</a>
+    <a href="https://rmit.instructure.com/" class="badge">Canvas</a>
+    <a href="https://github.com/noobfromvn99/RAD2020_s3673712_s3719368" class="badge">git</a>
+    </p>
+    </div>
+</div>
+</div>
+
+</div>

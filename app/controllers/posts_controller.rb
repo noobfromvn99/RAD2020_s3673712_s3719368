@@ -2,18 +2,18 @@ class PostsController < ApplicationController
   include PostsHelper
 
   def new
-    if current_user == nil
-      redirect_to root_url
-    else
+    if logged_in?
       @user = current_user
       @post = Post.new
+    else
+      redirect_to root_url
     end
   end
 
   def create
     @user = current_user
     @post = @user.posts.create(post_params)
-    if @user.save
+    if @post.save
       flash[:success] = "Success!"
       redirect_to @post
     else
@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    increaseViewed(@post)
     uid = @post.user_id #find author ID
     @topic = getTopic(@post.topic_id)
     @user = User.find(uid)

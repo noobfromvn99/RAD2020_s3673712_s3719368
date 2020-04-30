@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
-  layout "form"
+  layout :resolve_layout
   def new
+    if logged_in?
+      redirect_to index_path
+    end
+
     @user = User.new
   end
 
@@ -12,16 +16,27 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Success!"
+      log_in @user
       redirect_to @user
     else
       render 'new'
     end
   end
 
-  private
+    private
    def user_params
     params.require(:user).
       permit(:name,:email,:mobile,:password,:password_confirmation)
    end
+
+   private
+  def resolve_layout
+    case action_name
+    when "new", "create"
+      "form"
+    else
+      "application"
+    end
+  end
 
 end
