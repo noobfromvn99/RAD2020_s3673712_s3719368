@@ -349,3 +349,11 @@ a.badge:hover, a.badge:focus{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.nav-link.active{
+  border-bottom: 5px solid orange;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  color: #fff;
+}

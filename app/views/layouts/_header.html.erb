@@ -2,11 +2,22 @@
 
 <%= link_to "Ruby Forums", '/index', id: "logo",style:"margin-left:10px;" %>
 <nav>
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to "Home",   '/index' %></li>
-    <li><%= link_to "Help",   '#' %></li>
+  <ul class="nav navbar-nav navbar-left">
+    <li ><%= link_to "Home",   '/index',class:"nav-link active" %></li>=
+    <li class = "dropdown" id="topic_select"><a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">  
+      <%= Topic.find(1).name %> <b class = "caret"></b> 
+    </a>  
+    <ul class = "dropdown-menu">  
+    <% Topic.all.each do |topic| %>
+      <li><%= link_to topic.name, index_path(:topic_id => topic.id), remote: true, onclick:"selevt_nav_item()" %></li> 
+    <%end%>
+    </ul> 
+   </li> 
+
     <% if logged_in? %> 
-    <li><%= link_to "Users", '#'%></li> 
+    <li><%= link_to current_user.name, current_user %></li> 
+    </ul>
+   <ul class="nav navbar-nav navbar-right">
     <li class = "dropdown"><a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">  
       Account <b class = "caret"></b> 
     </a>  
@@ -17,8 +28,11 @@
     <li><%= link_to "Log out", logout_path, method: :delete%></li>  
     </ul> 
   </li> 
-  <% else %>  
-  <li><%= link_to "Log in", login_path %></li>  
+  <% else %> 
+   </ul> 
+   <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to "Log in", login_path %></li>  
+   </ul>
   <% end% %>
   </ul>
 </nav>
