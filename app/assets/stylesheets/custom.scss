@@ -52,12 +52,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #777;
   }
 
-  h4{
-    border-left: 5px solid red;
-    background-color: lightgrey;
-    padding: 5px 30px 5px ;
-  }
-  
+
   p {
     font-size: 1.1em;
     line-height: 1.7em;
@@ -98,15 +93,21 @@ footer {
   margin-top: 12px;
 }
   /* side bar */
+
 .badge{
-  border:1px solid lightgray;
-  padding: 5px 20px 5px;
   background-color: white;
   color: gray;
-  margin: 10px
+  border: 1px solid #bbb;
+  font-size: 16px;
+  padding: 3px 10px;
+  margin: 5px 6px;
+
 }
 .badge:hover{
   background-color: darkgray;
+}
+a.badge:hover, a.badge:focus{
+  color: gray;
 }
 /* Post */
 .post{
@@ -208,3 +209,86 @@ footer {
   float:right;
 }
 
+.badge-warning{
+    color: #212529;
+    background-color: #ffc107;
+}
+.badge-pill {
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem;
+  color: gray;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-title {
+  border-left: 5px solid red;
+  background-color: whitesmoke;
+  padding: 5px 30px 5px;
+  margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0;
+}
+
+.side-bar {
+  padding:0;
+  width:300px;
+  margin-left:90px
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+
+.card-link + .card-link {
+  margin-left: 1.25rem;
+}
+
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.post-container {
+  margin-left : 40px;
+  margin-right: 20px;
+}
+.post-title {
+  border-left: 5px solid green;
+  background-color: whitesmoke;
+  padding: 8px 10px 5px;
+  margin-bottom: 30px;
+  height: 40px;
+}
