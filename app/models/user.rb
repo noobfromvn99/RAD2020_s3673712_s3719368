@@ -7,10 +7,10 @@ class User < ApplicationRecord
                uniqueness: { case_sensitive: false }
     before_save { self.email = self.email.downcase }
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 8, maximum: 20 }
     VALID_MOBILE_REGEX = /\d/
     validates :mobile, presence: true,
-               length: { minimum:10, maximum: 10},
+               length: { minimum:10},
                format: { with: VALID_MOBILE_REGEX } 
     has_many :posts, dependent: :destroy
 
