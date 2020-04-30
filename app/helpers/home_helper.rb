@@ -1,5 +1,5 @@
 module HomeHelper
-    def getRecentPost
+    def get_recent_post
         oldest_day = 1.month.ago
         @posts = Post.where("created_at >= ?",oldest_day).order("created_at").reverse_order
         return @posts

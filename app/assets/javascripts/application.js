@@ -37,6 +37,11 @@ function select_opt(element){
         active[0].className = "list-group-item"
         name.className = "list-group-item active";
     } 
-
 }
 
+function selevt_nav_item(){
+    var active = document.getElementsByClassName("nav-link active");
+    active[0].className = "nav-link"
+    var item = document.getElementById("topic_select");
+    item.className = "nav-link active";
+}

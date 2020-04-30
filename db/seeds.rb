@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Post.destroy_all
 Topic.destroy_all
+NEWS = Topic.create!(name:"News")
 RMIT = Topic.create!(name:"RMIT")
 VR = Topic.create!(name:"V.R.")
 AI = Topic.create!(name:"A.I.")
