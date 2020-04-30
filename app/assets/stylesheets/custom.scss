@@ -98,6 +98,14 @@ footer {
   background-color: darkgray;
 }
 /* Post */
+
+.custom-highlight{
+  color: black;
+}
+.custom-highlight:hover{
+  color: red;
+  text-decoration: none;
+}
 .post{
   background-color: white;
   margin: 0 15px 5px 15px;
