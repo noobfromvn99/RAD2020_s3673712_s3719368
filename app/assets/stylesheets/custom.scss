@@ -106,6 +106,9 @@ footer {
 .badge:hover{
   background-color: darkgray;
 }
+a.badge:hover, a.badge:focus{
+  color: gray;
+}
 /* Post */
 .post{
   background-color: white;
@@ -199,6 +202,7 @@ footer {
   padding-right: .6em;
   padding-left: .6em;
   border-radius: 10rem;
+  color: gray;
 }
 
 .card {
