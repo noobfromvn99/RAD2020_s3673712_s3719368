@@ -98,7 +98,15 @@ footer {
   background-color: darkgray;
 }
 /* Post */
-
+.btn-light{
+  background-color: white;
+  color: black;
+  width: 100%;
+  border: 1px solid black;
+}
+.btn-light:hover{
+  background-color: rgba(226, 63, 41, 0.918);
+}
 .custom-highlight{
   color: black;
 }

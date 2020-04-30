@@ -26,11 +26,16 @@
         <%= f.text_area :content,  class: 'form-control', :rows => 12, placeholder: 'Enter post content here' %>  
     </div>
 
-
+    <div class="row">
       <div class="form-group">
+      <div class="col-sm-2">
       <%= f.submit "Post" ,class: 'btn btn-success'%>
-      <%= link_to "Cancel", "/index",class: 'btn btn-link'%>
       </div>
+      <div class="col-sm-2">
+      <a href = "/index", class="btn btn-light">Cancel</a>
+      </div>
+      </div>
+    </div>
     <% end %>
 </div>
 </div>
