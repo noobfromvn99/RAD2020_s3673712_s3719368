@@ -1,23 +1,51 @@
-<% provide(:title , @user.name) %>
-<body class="profile-body">
-<div class= "container">
-  <h1>Avatar here</h1>
-  <h3>
-  <%= @user.name %></h3>
- 
-  <div class="profile-content">
-    <div class="col-sm-3 text-center">
-      <i class="glyphicon glyphicon-time"></i>
-      <%= @user.created_at.strftime("%m/%d/%Y") %>
-    </div>
-    <div class="col-sm-3 text-center">
-      <i class="glyphicon glyphicon-map-marker"></i>
-      <%= @user.city %>
-    </div>
-  </div>
-</div>
+<% provide(:title , @user.name) %>          
+<body class="profile-body">         
+<div class= "container">          
+  <h1>Avatar here</h1>          
+  <h3>          
+  <%= @user.name %></h3>          
 
-<div class="profile-post-content">
-<h1>Post here</h1>
-</div>
-</body>
+  <div class="profile-content">         
+    <div class="col-sm-3 text-center">          
+      <i class="glyphicon glyphicon-time"></i>          
+      <%= @user.created_at.strftime("%d-%m-%Y") %>          
+    </div>          
+    <div class="col-sm-3 text-center">          
+      <i class="glyphicon glyphicon-map-marker"></i>          
+      <%= @user.city %>         
+    </div>          
+  </div>          
+</div>          
+
+  <div class="d-flex align-items-stretch bottom-display">         
+      <div class="profile-content"> 
+          <%# display recent post %>        
+          <div class="col-sm-6" >         
+          <h5 class="post-title" style="margin: 30px 0 0 0!important">Recent posts</h5>         
+                <div class="container-fluid custom-display">   
+                <% Post.all.each do |post| %>
+                <% if @user == get_user(post.user_id) %>
+                <div class="row post-each">
+                  <span class="display-title"><%= link_to post.title, post, class:"custom-highlight" %></span>
+                
+                  <span style="float:right;display: inline-block;">
+                  <%= post.created_at.strftime("%d-%m-%Y")%>
+                  </span>
+                   
+                </div>
+                <% end %>
+                <% end %>        
+                </div>          
+          </div> 
+
+          <%# display recent comments %>
+          <div class="col-sm-6">          
+          <h5 class="post-title" style="margin: 30px 0 0 0 !important">Recent comments</h5>         
+                <div class="container-fluid custom-display">          
+                </div>          
+          </div>          
+      </div>          
+  </div>  
+
+
+</body>         

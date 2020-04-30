@@ -295,10 +295,28 @@ footer {
   display: flex;
   justify-content: center;
 }
-.profile-post-content{
+.bottom-display{
   background-color:$gray-medium-light;
   flex-grow: 1;
+  height: 650px;
+  margin: 50px 50px 0;
 }
 .profile-body > * {
   flex-shrink: 0;
+}
+
+.custom-display{
+  height:450px;
+  background-color:white;
+}
+.post-each{
+  padding: 10px 30px;
+  border-bottom: 1px solid lightgrey;
+}
+.display-title{
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
