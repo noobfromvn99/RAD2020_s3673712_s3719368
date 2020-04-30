@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+  get 'password_resets/edit'
   root :to => "users#new"
   get    '/login'  ,   to: 'sessions#new'
   get    '/signup' ,   to: 'users#new'
@@ -13,5 +15,6 @@ Rails.application.routes.draw do
   get    '/selected_topic', to: 'home#filter_index'
   resources :users
   resources :posts
+  resources :password_resets, only: [:new, :create, :edit, :update]
  # check home_controller
 end

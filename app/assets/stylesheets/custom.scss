@@ -160,7 +160,22 @@ a.badge:hover, a.badge:focus{
     height:auto!important;
   }
   
+  .checkbox{
+  margin-top: -4px;
+  margin-bottom:10px;
+    span{
+    margin-left:20px;
+    font-weight:normal;
+    }
+  }
+  #session_remember_me{
+  width:auto;
+  margin-left:0;
+  }
 
+  .remember-me{
+    padding-left:135px;
+  }
 #error_explanation{
     color:red !important;
     ul{
