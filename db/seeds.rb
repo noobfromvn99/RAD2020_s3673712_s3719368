@@ -12,5 +12,5 @@ VR = Topic.create!(name:"V.R.")
 AI = Topic.create!(name:"A.I.")
 
 User.destroy_all
-RAD  = User.create!(name:"RAD",email:"RAD@RAD.com",mobile:"0433838666",password:"Rails2020")
+RAD  = User.create!(name:"RAD",email:"RAD@RAD.com",mobile:"0433838666",password:"Rails2020",city:"Melbourne")
 
