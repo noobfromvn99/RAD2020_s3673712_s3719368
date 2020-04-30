@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    increaseViewed(@post)
     uid = @post.user_id #find author ID
     @topic = getTopic(@post.topic_id)
     @user = User.find(uid)

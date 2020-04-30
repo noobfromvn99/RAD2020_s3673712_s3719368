@@ -3,23 +3,22 @@
 <div class="row">
   <div class="col-sm-12">
   <ul class="list-group list-group-horizontal-sm">
-    <li class="list-group-item active" id="RecentPost"><%= link_to "Recent Post"   '#' %></li>
-    <li class="list-group-item" id="SelectedPost"><%= link_to "Selected Post",   '#' %></li>
+    <li class="list-group-item active" id="RecentPost"><%= link_to "Recent Post" ,  clear_topic_path , onclick: "select_opt(this)", remote: true %></li>
+    <li class="list-group-item" id="SelectedPost"><%= link_to "Selected Post",   selected_topic_path ,  onclick: "select_opt(this)",remote: true %></li>
     <li class="list-group-item" id="MySetting"><%= link_to "My Setting", '#' %></li>
     
-    <li class="list-group-button"><%= link_to "New Post",   'post#new' , class:"btn btn-success", style:"float:right"%></li>
+    <li class="list-group-button"><%= link_to "New Post",   '/newpost' , class:"btn btn-success", style:"float:right"%></li>
     <li class="list-group-input"> <input class="form-control" type="text" placeholder="Search" aria-label="Search"> </li>
   </div>
 </div>
 <div class="row">
-<p>
-  <% @posts.each do |post| %>
-      <div class="container-fluid post">
-      <%= post.title %><br>
-      <%= @user.name %>
-      <%= post.created_at %>
-      <%= getTopic(post.topic_id) %>
-      </div>
-  <% end %> 
- </p> 
+<div id="posts-list">
+  <%= render partial: 'layouts/posts' , locals: { posts: @posts} %>
 </div>
+</div>
+</div>
+
+  <div class="col-sm-3" >
+  
+  <%= render partial:'layouts/sidebar' %>
+ 
