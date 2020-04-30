@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
   include PostsHelper
+  include HomeHelper
   @@topic_array ||= []
 
   def index 
-    @posts = Post.all
+    @posts = getRecentPost
     respond_to do |format|  
       format.html
       format.js
