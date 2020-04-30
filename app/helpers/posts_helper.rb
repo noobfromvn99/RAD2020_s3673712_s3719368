@@ -13,4 +13,8 @@ module PostsHelper
         post.viewed += 1 #update the view number here
         post.save
     end
+
+    def get_user(user_id)
+        User.find(user_id)
+    end
 end

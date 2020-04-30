@@ -5,7 +5,9 @@ class HomeController < ApplicationController
   def index 
     @posts = Post.all
     respond_to do |format|  
+      format.html
       format.js
+    end  
   end
 
   def add_topic
@@ -32,8 +34,6 @@ class HomeController < ApplicationController
     respond_to do |format|  
       format.js
     end
-  #  @topic_array = @@topic_array
-  #  render 'filter_index'
   end
 
 end
