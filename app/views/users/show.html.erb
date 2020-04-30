@@ -1,32 +1,51 @@
-<% provide(:title , @user.name) %>
-<p id="notice"><%= notice %></p>
+<% provide(:title , @user.name) %>          
+<body class="profile-body">         
+<div class= "container">          
+  <h1>Avatar here</h1>          
+  <h3>          
+  <%= @user.name %></h3>          
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <div class="profile-content">         
+    <div class="col-sm-3 text-center">          
+      <i class="glyphicon glyphicon-time"></i>          
+      <%= @user.created_at.strftime("%d-%m-%Y") %>          
+    </div>          
+    <div class="col-sm-3 text-center">          
+      <i class="glyphicon glyphicon-map-marker"></i>          
+      <%= @user.city %>         
+    </div>          
+  </div>          
+</div>          
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <div class="d-flex align-items-stretch bottom-display">         
+      <div class="profile-content"> 
+          <%# display recent post %>        
+          <div class="col-sm-6" >         
+          <h5 class="post-title" style="margin: 30px 0 0 0!important">Recent posts</h5>         
+                <div class="container-fluid custom-display">   
+                <% Post.all.each do |post| %>
+                <% if @user == get_user(post.user_id) %>
+                <div class="row post-each">
+                  <span class="display-title"><%= link_to post.title, post, class:"custom-highlight" %></span>
+                
+                  <span style="float:right;display: inline-block;">
+                  <%= post.created_at.strftime("%d-%m-%Y")%>
+                  </span>
+                   
+                </div>
+                <% end %>
+                <% end %>        
+                </div>          
+          </div> 
 
-<p>
-  <strong>Mobile:</strong>
-  <%= @user.mobile %>
-</p>
+          <%# display recent comments %>
+          <div class="col-sm-6">          
+          <h5 class="post-title" style="margin: 30px 0 0 0 !important">Recent comments</h5>         
+                <div class="container-fluid custom-display">          
+                </div>          
+          </div>          
+      </div>          
+  </div>  
 
-<p>
-  <strong>Created_at:</strong>
-  <%= @user.created_at %>
-</p>
 
-<p>
-  <strong>Updated_at:</strong>
-  <%= @user.updated_at %>
-</p>
-<p>
-<%= Time.now %>
-</p>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</body>         
