@@ -94,6 +94,15 @@ footer {
 }
   /* side bar */
 
+.badge{
+  background-color: white;
+  color: gray;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  padding: 3px 10px;
+  margin: 5px 6px;
+
+}
 .badge:hover{
   background-color: darkgray;
 }
@@ -220,9 +229,10 @@ footer {
   margin-bottom: 0;
 }
 
-#sticky-sidebar {
-  position:fixed;
-  max-width: 20%;
+.side-bar {
+  padding:0;
+  width:300px;
+  margin-left:90px
 }
 
 .card-text:last-child {
