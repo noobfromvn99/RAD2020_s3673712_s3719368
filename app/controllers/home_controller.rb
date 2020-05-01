@@ -4,7 +4,12 @@ class HomeController < ApplicationController
   @@topic_array ||= []
 
   def index 
-    @posts = getRecentPost
+    id = params[:topic_id]
+    if(id != nil)
+      @posts = Post.where("topic_id = ?", id)
+    else 
+      @posts = get_recent_post
+    end
     respond_to do |format|  
       format.html
       format.js
@@ -24,7 +29,7 @@ class HomeController < ApplicationController
     redirect_to index_path;
   end
 
-  def filter_index 
+  def filter_index #showing mutiple topic in index
     @filter_posts = []
     Post.all.each do |post|
       if @@topic_array.include?(getTopic(post.topic_id))
