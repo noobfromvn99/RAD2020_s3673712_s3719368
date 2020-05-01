@@ -5,10 +5,10 @@
   <ul class="nav navbar-nav navbar-left">
     <li ><%= link_to "Home",   '/index',class:"nav-link active" %></li>=
     <li class = "dropdown" id="topic_select"><a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">  
-      <%= Topic.find(1).name %> <b class = "caret"></b> 
+      News <b class = "caret"></b> 
     </a>  
     <ul class = "dropdown-menu">  
-    <% Topic.all.each do |topic| %>
+    <% Topic.ordered.each do |topic| %>
       <li><%= link_to topic.name, index_path(:topic_id => topic.id), remote: true, onclick:"selevt_nav_item()" %></li> 
     <%end%>
     </ul> 

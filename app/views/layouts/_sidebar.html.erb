@@ -8,7 +8,7 @@
     <h4 class="card-title"> Recent Members </h4>
     <p style="padding: 5px 15px 5px"> 
     <strong> 
-    <% get_recent_member do |user| %>
+    <% get_recent_member.each do |user| %>
         <a style="padding: 5px 15px 5px"><%= user.name %></a>
     <% end %>
     </strong>
