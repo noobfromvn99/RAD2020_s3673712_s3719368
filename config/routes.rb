@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get    '/add_topic', to: 'home#add_topic'
   get    '/clear_topic', to: 'home#clear_topic'
   get    '/selected_topic', to: 'home#filter_index'
+  get     '/index/:id' , to: 'home#bypass' 
   resources :users
   resources :posts
   resources :password_resets, only: [:new, :create, :edit, :update]
