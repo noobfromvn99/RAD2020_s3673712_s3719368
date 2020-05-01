@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
     @user = User.all
   end
   
-  def bypass
+  def bypass#ok so u got that page and use <%= link_to a, session_bypass_path %>
+    #email = params[:email]
     user = User.find_by(email: params[:email].downcase)
     redirect_to index_path
   end

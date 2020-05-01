@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'password_resets/new'
   get 'password_resets/edit'
-  root :to => "users#new"
+  root :to => "home#index"
   get    '/login'  ,   to: 'sessions#new'
   get    '/signup' ,   to: 'users#new'
   get    '/index'  ,   to: 'home#index'
@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   get    '/clear_topic', to: 'home#clear_topic'
   get    '/selected_topic', to: 'home#filter_index'
   get     '/index/:id' , to: 'home#bypass' 
+  get     '/session_bypass', to: 'sessions#bypass'
   resources :users
   resources :posts
-  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :password_resets, only: [:new, :create, :edit, :update]##here
  # check home_controller
 end
