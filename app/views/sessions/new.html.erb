@@ -10,49 +10,24 @@
     
     <div class = "col-md-12">    
     <%= form_for(:session , url: login_path) do |f| %>  
-    <% @user.each do |user|%>
-    <% if user.remember_digest.nil? %>
     <div class = "row">
     <div class="form-group mb-2">
       <%= f.label :email ,"Email", class:"col-sm-2 col-form-label" %>
       <div class="col-sm-10">
-        <%= f.email_field :email, class: 'form-control',
-        placeholder: "Enter your username" %> 
-      </div>
-    </div>
-    </div>
-
-    <div class = "row"> 
-    <div class="form-group mb-2">
-      <%= f.label :password ,"Password", class:"col-sm-2 col-form-label" %>
-      <div class="col-sm-10">
-        <%= f.password_field :password, class: 'form-control', 
-        placeholder: "Enter your password" %>  
-      </div>
-    </div>
-    </div>
-    <% else %>
-    <div class = "row">
-    <div class="form-group mb-2">
-      <%= f.label :email ,"Email", class:"col-sm-2 col-form-label" %>
-      <div class="col-sm-10">
-        <%= f.email_field :email, class: 'form-control',
+        <%= f.email_field :email, class: 'form-control', placeholder: "Enter your username",
         value: cookies[:user_email]%> 
       </div>
     </div>
     </div>
-
     <div class = "row"> 
     <div class="form-group mb-2">
       <%= f.label :password ,"Password", class:"col-sm-2 col-form-label" %>
       <div class="col-sm-10">
-        <%= f.password_field :password, class: 'form-control', 
+        <%= f.password_field :password, class: 'form-control', placeholder: "Enter your password",
         value: cookies[:user_password] %>  
       </div>
     </div>
     </div>
-    <% end %>
-    <% end %>
     <div class = "row">
       <div class = "col-md-6 remember-me" style = "float: left;"> 
         <%= f.label :remember_me, class:"checkbox inline" do %>
