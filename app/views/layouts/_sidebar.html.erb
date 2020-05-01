@@ -31,13 +31,13 @@
 </div>
 </div>
 <br><br>
-<%# recent users %>
+<%# Post %>
 <div class="container side-bar">
 <div class="card">
     <div class="card-body">
     <h4 class="card-title"> Post </h4>
     <% get_most_viewed_post.each do |post| %> 
-        <%= link_to post.title, post  ,class: "badge"%>
+        <h4 class="media-heading side-heading"><%= link_to post.title, post  , class:"custom-highlight"%></h4>
     <% end %>
     </div>
 </div>

@@ -103,7 +103,7 @@ footer {
   color: gray;
   border: 1px solid #bbb;
   font-size: 16px;
-  padding: 3px 10px;
+  padding: 4px 15px;
   margin: 5px 6px;
 
 }
@@ -270,8 +270,8 @@ a.badge:hover, a.badge:focus{
 
 .side-bar {
   padding:0;
-  width:300px;
-  margin-left:90px
+  width:400px;
+  margin-left:40px
 }
 
 .card-text:last-child {
@@ -349,7 +349,21 @@ a.badge:hover, a.badge:focus{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
+.side-heading{
+  padding: 5px 10px;
+  display: block;
+  width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.long-title{
+  display: block;
+  width: 810px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
+}
 .nav-link.active{
   border-bottom: 5px solid orange;
 }
