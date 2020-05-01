@@ -371,3 +371,67 @@ a.badge:hover, a.badge:focus{
 .navbar-inverse .navbar-nav > .active > a {
   color: #fff;
 }
+/* My Setting */
+
+.sidenav {
+  margin:30px 30px 0;
+  height: 80vh;
+  width: 270px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding: 0;
+}
+.main-setting{
+  margin:30px 0 0 30px;
+  height: 80vh;
+  background-color: white;
+}
+.setting-body{
+  background-color: $gray-medium-light;
+}
+.sidenav .post-title{
+  background-color: black;
+  border-left: none;
+  padding: 10px 0 10px 16px;
+  margin: 0;
+}
+.sidenav a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #818181;
+}
+
+.sidenav .post-title:hover {
+  border-left: 5px solid green;
+  background-color: darkgray;
+  padding: 10px 0 10px 16px;
+  margin: 0;
+}
+
+.main-nav a{
+  color: black;
+  font-size: 24px;
+  padding: 2px 8px;
+  width: 100px;
+}
+.main-nav a:hover{
+  width: 100px;
+  color: green;
+  font-size: 24px;
+  padding: 2px 8px;
+  border-bottom: 3px solid green;
+  text-decoration: none;
+}
+.nav-cover{
+  border-bottom: 2px solid $gray-medium-light;
+  padding:0;
+}
+.setting-info{
+  margin-top: 30px;
+  padding: 30px 0 30px 120px;
+  font-size: 20px;
+  background-color: $gray-medium-light;
+}

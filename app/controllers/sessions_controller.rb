@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
-  layout "form"
+  layout :resolve_layout
   def new
     @user = User.all
   end
   
-  def bypass#ok so u got that page and use <%= link_to a, session_bypass_path %>
+  def bypass
     #email = params[:email]
     user = User.find_by(email: params[:email].downcase)
     log_in user
@@ -41,4 +41,16 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+
+  def setting
+  end
+
+  def resolve_layout
+    case action_name
+    when "setting"
+      "application"
+    else
+      "form"
+    end
+    end
 end
