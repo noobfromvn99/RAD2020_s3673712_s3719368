@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get    '/selected_topic', to: 'home#filter_index'
   get    '/index/:id'     , to: 'home#bypass' 
   get    '/session_bypass', to: 'sessions#bypass'
-  get    '/my_setting'    , to: 'sessions#setting'
+  get    '/my_setting'    , to: 'users#setting'
+  post   '/my_setting', to: 'users#update'
   resources :users
   resources :posts
   resources :password_resets, only: [:new, :create, :edit, :update]##here

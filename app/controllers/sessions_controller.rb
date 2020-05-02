@@ -36,15 +36,14 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
-
+ 
   def destroy
     log_out if logged_in?
     redirect_to root_url
   end
-
-  def setting
-  end
-
+  
+  private
+ 
   def resolve_layout
     case action_name
     when "setting"
