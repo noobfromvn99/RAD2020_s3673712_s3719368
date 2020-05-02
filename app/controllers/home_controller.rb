@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def index 
     id = params[:topic_id]
+
     if(id != nil)
       @posts = Post.where("topic_id = ?", id)
     else 
@@ -40,6 +41,11 @@ class HomeController < ApplicationController
     respond_to do |format|  
       format.js
     end
+  end
+
+  def search_index #return the title or
+    keyword = params[:search].downcase
+    @posts = Post.where("lower(title) like ?", "%#{keyword}%").or(Post.where("lower(content) like ?", "%#{keyword}%"))
   end
 
 end

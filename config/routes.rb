@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   post     '/comments', to: 'posts#comment'
   get     '/reply', to: 'posts#reply'
   post    '/reply', to: 'posts#create_reply'
+  get     '/search', to: 'home#search_index'
   resources :users
   resources :posts
   resources :comments
