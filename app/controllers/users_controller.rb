@@ -34,6 +34,16 @@ class UsersController < ApplicationController
   
 
   def edit
+    respond_to do |format|  
+      format.html
+      format.js
+    end  
+  end
+
+  def avatar #showing mutiple topic in index
+    respond_to do |format|  
+      format.js
+    end
   end
 
     private
@@ -55,5 +65,7 @@ class UsersController < ApplicationController
       "application"
     end
   end
+
+ 
 
 end
