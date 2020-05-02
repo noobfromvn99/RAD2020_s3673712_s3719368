@@ -10,7 +10,7 @@ class User < ApplicationRecord
     before_save { self.email = self.email.downcase }
     has_secure_password
     #password validation
-    validates :password, presence: true, length: { minimum: 8, maximum: 20 }
+    validates :password, presence: true, length: { minimum: 8, maximum: 20 }, :if => :password
     #phone validation
     VALID_MOBILE_REGEX = /\d/
     validates :mobile, presence: true,

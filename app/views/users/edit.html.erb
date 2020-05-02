@@ -1,6 +1,5 @@
 <% provide(:title, "My setting") %> 
 <body class="setting-body">
-<%= render'shared/error_messages' %>
 
 <div class="container-fluid"  style="height: 80vh">
 <div class="row" style="height: 80vh">
@@ -46,6 +45,7 @@
             <div class="container-fluid setting-info">
             You can modify your contact detail below
             </div>
+            <%= render'shared/setting_error' %>
             <%= form_for(current_user)  do |f| %>
             <div class="input-group mb-3" style="margin-bottom: 25px;margin-top: 25px;">
                 <div class="input-group-addon">
@@ -80,6 +80,7 @@
                     <span class="input-group-text" style="float:left">Personal Introduction</span>
             </div> 
             <%= f.text_area :bio,  class: 'form-control', :rows => 5, placeholder: 'Leave your personal bio here' %>  
+            <%= current_user.id%>
             </div>
 
             <div class="row">

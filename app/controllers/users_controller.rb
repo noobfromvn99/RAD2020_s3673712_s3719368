@@ -24,20 +24,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
-    @user.name = params[:name]
-    @user.save
-    if @user.save
+    if current_user.update(update_params)
       flash[:success] = "Success!"
-      redirect_to my_setting_path
+      redirect_to current_user
     else
-      render 'setting'
+      render :edit
     end
   end
   
 
-  def setting
-    @user = current_user
+  def edit
   end
 
     private
@@ -48,7 +44,7 @@ class UsersController < ApplicationController
 
    def update_params
     params.require(:user).
-      permit(:name,:email,:mobile,:city)
+      permit(:name,:email,:mobile,:city,:bio)
    end
   
   def resolve_layout
