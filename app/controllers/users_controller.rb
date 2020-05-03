@@ -36,6 +36,8 @@ class UsersController < ApplicationController
   
 
   def edit
+    @user_class = "nav-link active"
+    @home_class = ""
     respond_to do |format|  
       format.html
       format.js
