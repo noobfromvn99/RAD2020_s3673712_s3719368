@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get    '/session_bypass', to: 'sessions#bypass'
   get    '/setting'    , to: 'users#edit'
   post    '/setting'   , to: 'users#update'
+  get    '/my_post',   to: 'posts#my_posts'   
   resources :users
   resources :posts
   resources :password_resets, only: [:new, :create, :edit, :update]##here

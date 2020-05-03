@@ -29,6 +29,10 @@ class PostsController < ApplicationController
     @user = User.find(uid)
   end
 
+  def my_posts
+    @my_posts = Post.where(user_id: current_user.id)
+  end  
+
   private
    def post_params 
     params.require(:post).
