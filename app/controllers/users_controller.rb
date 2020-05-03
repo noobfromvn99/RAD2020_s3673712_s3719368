@@ -44,7 +44,13 @@ class UsersController < ApplicationController
     end  
   end
 
-  def avatar #showing mutiple topic in index
+  def avatar 
+    respond_to do |format|  
+      format.js
+    end
+  end
+
+  def password 
     respond_to do |format|  
       format.js
     end
@@ -58,7 +64,7 @@ class UsersController < ApplicationController
 
    def update_params
     params.require(:user).
-      permit(:name,:email,:mobile,:city,:bio)
+      permit(:name,:email,:mobile,:city,:bio,:password,:password_confirmation)
    end
   
   def resolve_layout

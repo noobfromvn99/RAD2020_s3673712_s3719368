@@ -36,10 +36,10 @@
     <div class="container-fluid" style="margin:20px;">
             <div class="container-fluid nav-cover">
             <div class="main-nav">
-                <a href="/setting" , onclick: "select_opt(this)", remote: true>Personal Info</a>
+                <%=link_to "Personal Info", setting_path, remote: true%>
                 <%=link_to "Avatar", avatar_path, remote: true%>
-                <a href="#">Password</a>
-                <a href="#">Verification</a>
+                <%=link_to "Password", password_path, remote: true%>
+                <%#=link_to "Verification", verification_path, remote: true%>
             </div>
             </div>
 
