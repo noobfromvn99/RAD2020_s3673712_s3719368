@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user_class = "nav-link active"
+    @home_class = ""
   end
   
   def create

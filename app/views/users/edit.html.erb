@@ -7,7 +7,7 @@
         <div class="col-sm-3 sidenav">
 
             <div class="row post-title"><i class="glyphicon glyphicon-send" style="font-size:25px;margin-right:10px"></i>
-            <a href="#about">My Profile</a>
+            <%= link_to "Personal Info", current_user%>
             </div>
             
             <div class="row post-title"><i class="glyphicon glyphicon-user" style="font-size:25px;margin-right:10px"></i>
@@ -37,14 +37,14 @@
             <div class="container-fluid nav-cover">
             <div class="main-nav">
                 <a href="/setting" , onclick: "select_opt(this)", remote: true>Personal Info</a>
-                <a href="/avatar" onclick: "select_opt(this)" remote: true>Avatar</a>
+                <%=link_to "Avatar", avatar_path, remote: true%>
                 <a href="#">Password</a>
                 <a href="#">Verification</a>
             </div>
             </div>
 
             <div id="setting-list">
-            <%= render partial: 'users/info' %>
+                <%= render partial: 'users/info' %>
             </div>
             
           
