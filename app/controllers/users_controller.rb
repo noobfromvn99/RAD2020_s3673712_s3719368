@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user_class = "nav-link active"
+    @home_class = ""
   end
   
   def create
@@ -23,13 +25,48 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    if current_user.update(update_params)
+      flash[:success] = "Success!"
+      redirect_to current_user
+    else
+      render :edit
+    end
+  end
+  
+
+  def edit
+    @user_class = "nav-link active"
+    @home_class = ""
+    respond_to do |format|  
+      format.html
+      format.js
+    end  
+  end
+
+  def avatar 
+    respond_to do |format|  
+      format.js
+    end
+  end
+
+  def password 
+    respond_to do |format|  
+      format.js
+    end
+  end
+
     private
    def user_params
     params.require(:user).
       permit(:name,:email,:mobile,:password,:password_confirmation)
    end
 
-   private
+   def update_params
+    params.require(:user).
+      permit(:name,:email,:mobile,:city,:bio,:password,:password_confirmation)
+   end
+  
   def resolve_layout
     case action_name
     when "new", "create"
@@ -38,5 +75,7 @@ class UsersController < ApplicationController
       "application"
     end
   end
+
+ 
 
 end
