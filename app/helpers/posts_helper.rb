@@ -18,4 +18,11 @@ module PostsHelper
         User.find(user_id)
     end
 
+    def get_post(post_id)
+        Post.find(post_id)
+    end
+
+    def get_main_comment(post)
+        post.comments.where("comment_id = ?", nil)
+    end
 end

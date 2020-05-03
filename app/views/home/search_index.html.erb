@@ -1,0 +1,6 @@
+<% provide(:title , "Search result") %>
+<div class="row">
+    <div id="posts-list">
+      <%= render partial: 'layouts/posts' , locals: { posts: @posts} %>
+    </div>
+</div>

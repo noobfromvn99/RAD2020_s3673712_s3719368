@@ -1,0 +1,51 @@
+<div class="comment-container">
+<h3 class="text-right">
+    <%= @post.comments.size%> Comments
+</h3>
+<% @post.comments.each do |comment| %>
+  <hr>
+  <div class="comment-body">
+    <ul class="list-inline list-unstyled">
+        <li><p><%= link_to get_user(comment.user_id).name, get_user(comment.user_id),class:"post-a-username"  %></p></li>
+        <li class="post-span-item"> <%= link_to '','#', class:"glyphicon glyphicon-comment", onclick:"display_reply(#{comment.id})",remote:true %>
+    </ul>
+    <ul class="list-inline list-unstyled">
+        <li><span style="color:gray;" ><%= comment.created_at %></span> </li>
+    </ul>
+    <ul class="list-inline list-unstyled">
+       <p style="font-size:15px">
+        <%= comment.content %>
+        </p>
+    </ul>
+
+    <div class="subcomment">
+    <%comment.comments.each do |subcomment| %>
+        <p style="font-size:13px">
+        <%= link_to get_user(subcomment.user_id).name, get_user(subcomment.user_id),class:"post-a-username"  %> :
+        
+        <%= subcomment.content %>
+        </p>
+    <%end%>
+    </div>
+    
+    </div>
+
+    <%= tag.div id: comment.id, class: "reply-box"  do %>
+        <div class="well" style="margin-bottom: 0px">
+        <%= form_for(Comment.new, url: reply_path) do |f| %>
+            <div class="form-group">
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+            <%= f.hidden_field :comment_id, :value => comment.id %>
+            <%= f.text_area :content,  class: 'form-control', :rows => 2, placeholder: 'Enter comment content here' %>  
+        </div>
+        <div class="row">
+        <div class="col-sm-2">
+            <%= f.submit "Reply" ,class: 'btn btn-success'%>
+        </div>
+    </div>
+<%end%>
+</div>
+  <% end %>
+
+  <hr>
+<% end %>

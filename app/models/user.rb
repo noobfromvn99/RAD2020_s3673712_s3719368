@@ -17,6 +17,7 @@ class User < ApplicationRecord
                length: { minimum:10},
                format: { with: VALID_MOBILE_REGEX } 
     has_many :posts, dependent: :destroy
+    has_many :comments, dependent: :destroy
 
     def self.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

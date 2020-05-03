@@ -15,13 +15,17 @@ Rails.application.routes.draw do
   get    '/selected_topic', to: 'home#filter_index'
   get    '/avatar'         , to: 'users#avatar'
   get    '/password'         , to: 'users#password'
-  get    '/index/:id'     , to: 'home#bypass' 
-  get    '/session_bypass', to: 'sessions#bypass'
   get    '/setting'    , to: 'users#edit'
   post    '/setting'   , to: 'users#update'
   get    '/my_post',   to: 'posts#my_posts'   
+  get     '/session_bypass', to: 'sessions#bypass'
+  post     '/comments', to: 'posts#comment'
+  get     '/reply', to: 'posts#reply'
+  post    '/reply', to: 'posts#create_reply'
+  get     '/search', to: 'home#search_index'
   resources :users
   resources :posts
+  resources :comments
   resources :password_resets, only: [:new, :create, :edit, :update]##here
  # check home_controller
 end

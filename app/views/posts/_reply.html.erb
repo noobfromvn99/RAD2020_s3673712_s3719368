@@ -1,0 +1,14 @@
+<div class="well" style="margin-bottom: 0px">
+<%= form_for(Comment.new, url: reply_path) do |f| %>
+    <div class="form-group">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :comment_id, :value => comment.id %>
+    <%= f.text_area :content,  class: 'form-control', :rows => 2, placeholder: 'Enter comment content here' %>  
+</div>
+<div class="row">
+    <div class="col-sm-2">
+      <%= f.submit "Reply" ,class: 'btn btn-success'%>
+    </div>
+</div>
+<%end%>
+</div>
