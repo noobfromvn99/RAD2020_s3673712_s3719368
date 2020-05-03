@@ -24,6 +24,7 @@
     </div>
     <p class="post-p-content">
         <%= @post.content %>
+        <%= image_tag  @post.picture.url if @post.picture? %>
     </p>
 
     <div class="post-span-comment">Comment</div>
