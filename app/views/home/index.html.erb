@@ -6,7 +6,7 @@
       <li class="list-group-item active" id="RecentPost"><%= link_to "Recent Post" ,  clear_topic_path , onclick: "select_opt(this)", remote: true %></li>
       <li class="list-group-item" id="SelectedPost"><%= link_to "Selected Post",   selected_topic_path ,  onclick: "select_opt(this)",remote: true %></li>
       <% if logged_in? %> 
-      <li class="list-group-item" id="MySetting"><%= link_to "My Setting", '#' %></li>
+      <li class="list-group-item" id="MySetting"><%= link_to "My Setting", setting_path %></li>
       <%end%>
       <li class="list-group-button"><%= link_to "New Post",   '/newpost' , class:"btn btn-success", style:"float:right"%></li>
       <%= form_tag(search_path, :method => 'get', class:'form-inline d-flex justify-content-center md-form form-sm mt-0') do%>
