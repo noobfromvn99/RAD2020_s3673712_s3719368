@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   include PostsHelper
-
+  before_action :logged_in?, only:[:create, :destroy]
+  before_action :correct_user, only: :destroy
   def new
     if logged_in?
       @user = current_user
@@ -56,7 +57,7 @@ class PostsController < ApplicationController
   private
    def post_params 
     params.require(:post).
-      permit(:title,:topic_id,:content)
+      permit(:title,:topic_id,:content, :picture)
    end
 
    private

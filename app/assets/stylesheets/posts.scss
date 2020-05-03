@@ -38,3 +38,11 @@
     padding-top: 5px;
     border-top: 1px dashed #f0eeeb;
 }
+
+.image-upload > input
+{
+   display: none;
+}
+.image-upload > label{
+  cursor:pointer;
+}
