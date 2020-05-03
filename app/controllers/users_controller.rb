@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   layout :resolve_layout
+  before_action :logged_in?, only: [:edit, :avatar]
   def new
     if logged_in?
       redirect_to index_path
@@ -50,6 +51,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def upload_avatar
+    if current_user.update(avatar_params)
+      redirect_to current_user
+    end
+  end
+
   def password 
     respond_to do |format|  
       format.js
@@ -65,6 +72,11 @@ class UsersController < ApplicationController
    def update_params
     params.require(:user).
       permit(:name,:email,:mobile,:city,:bio,:password,:password_confirmation)
+   end
+
+   def avatar_params
+    params.require(:user).
+      permit(:avatar)
    end
   
   def resolve_layout

@@ -33,6 +33,15 @@ class PostsController < ApplicationController
   def my_posts
     @my_posts = Post.where(user_id: current_user.id)
   end  
+
+  def my_comments
+    @my_comments = Comment.where(user_id: current_user.id, comment_id: nil)
+    @my_comments_to_comments = Comment.where(user_id: current_user.id, comment_id: !nil)
+  end
+
+  def other_comments
+    @comments = Comment.joins(:post).where(posts.user_id: current_user.id)
+  end
   
   def comment
     @comment = Comment.create(comment_params)

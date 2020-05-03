@@ -17,12 +17,15 @@ Rails.application.routes.draw do
   get    '/password'         , to: 'users#password'
   get    '/setting'    , to: 'users#edit'
   post    '/setting'   , to: 'users#update'
-  get    '/my_post',   to: 'posts#my_posts'   
+  get    '/my_post',   to: 'posts#my_posts'
+  get    '/my_comment',   to: 'posts#my_comments'    
+  get    '/other_comment',   to: 'posts#other_comments'    
   get     '/session_bypass', to: 'sessions#bypass'
   post     '/comments', to: 'posts#comment'
   get     '/reply', to: 'posts#reply'
   post    '/reply', to: 'posts#create_reply'
   get     '/search', to: 'home#search_index'
+  patch    '/avatar_upload', to: 'users#upload_avatar'
   resources :users
   resources :posts
   resources :comments

@@ -39,4 +39,12 @@ module SessionsHelper
     def forget(user)
         cookies.delete(:user_id)
     end
+
+    def get_avatar(user)
+        if user.avatar?
+            user.avatar.url
+        else
+            'deafult-avatar.jpg'
+        end
+    end
 end

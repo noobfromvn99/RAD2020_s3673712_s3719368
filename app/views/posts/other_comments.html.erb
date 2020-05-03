@@ -1,0 +1,19 @@
+<div class="col-sm-12">
+<p>Others comments to my posts</p>
+<p>
+
+  <% @comments.each do |comment| %>
+      <div class="well" style="margin-bottom:5px;" >
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading long-title"><%= link_to comment.content,  class:"custom-highlight" %></h4>
+            <h4>to</h4>
+            <h4 class="media-heading long-title"><%= link_to comment.post_id,  class:"custom-highlight" %></h4>
+          </div>
+        </div>
+      </div>
+  <% end %> 
+ </p> 
+ <p>
+</div>
+
