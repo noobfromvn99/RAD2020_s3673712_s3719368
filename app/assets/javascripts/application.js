@@ -17,8 +17,6 @@
 //= require jquery 
 //= require bootstrap
 //= require js.cookie
-//= require("trix")
-//= require("@rails/actiontext")
 
 function select_tag(element){
     var name = element;
