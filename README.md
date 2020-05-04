@@ -1,24 +1,19 @@
-# README
+# Ruby Forum
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Developed by Bach T Dao - s3673712 and Yongqian Huang s3719368
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## System dependencies
+* Ruby version: 2.5.7
+* Bootstrap sass 3.3.7
+* Carrierwave
+* Mini Magick
+* Jquerry
+* Postgres database
+* puma
+* uglifier
+* coffee-rails
+* turbolinks
+* jbuilder
+* bcrypt
+## Heroku link
+Ruby-forum-rmit.herokuapp.com(Ruby-forum-rmit.herokuapp.com)
