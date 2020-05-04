@@ -8,12 +8,21 @@ class PictureUploader < CarrierWave::Uploader::Base
   storage :file
   # storage :fog  
 
+
+  if Rails.env.production?
+    storage:fog
+  else
+    storage:file
+  end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  def size_range
+    0.megabytes..5.megabytes
+  end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
