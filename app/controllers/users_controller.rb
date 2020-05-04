@@ -68,8 +68,7 @@ class UsersController < ApplicationController
   end
 
   def other_comments
-    user_posts = current_user.posts
-    @comments = user_posts.comments
+    @comments = Comment.joins(:posts).where("Post.user_id = ?", current_user.id)
   end
   
 
