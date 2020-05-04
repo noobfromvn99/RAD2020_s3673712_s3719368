@@ -58,6 +58,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def my_posts
+    @my_posts = Post.where(user_id: current_user.id)
+  end  
+
+  def my_comments
+    @my_comments = Comment.where(user_id: current_user.id, comment_id: nil)
+    @my_comments_to_comments = Comment.where("user_id = ? and comment_id > 0", current_user.id)
+  end
+
+  def other_comments
+    user_posts = current_user.posts
+    @comments = user_posts.comments
+  end
+  
+
   def password 
     respond_to do |format|  
       format.js
@@ -88,9 +103,5 @@ class UsersController < ApplicationController
       "application"
     end
   end
-
-
-
- 
 
 end
