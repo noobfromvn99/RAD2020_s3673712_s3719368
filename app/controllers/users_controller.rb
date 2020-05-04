@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   layout :resolve_layout
   before_action :logged_in?, only: [:edit, :avatar]
+
   def new
     if logged_in?
       redirect_to index_path
@@ -87,6 +88,8 @@ class UsersController < ApplicationController
       "application"
     end
   end
+
+
 
  
 

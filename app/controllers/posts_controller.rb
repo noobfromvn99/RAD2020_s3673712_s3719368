@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   include PostsHelper
   before_action :logged_in?, only:[:create, :destroy]
-  before_action :correct_user, only: :destroy
+ # before_action :correct_user, only: :destroy
   def new
     if logged_in?
       @user = current_user
@@ -22,6 +22,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = "Successfully deleted!"
+    redirect_to root_url
+  end
+
   def show
     @post = Post.find(params[:id])
     increaseViewed(@post)
@@ -36,11 +43,12 @@ class PostsController < ApplicationController
 
   def my_comments
     @my_comments = Comment.where(user_id: current_user.id, comment_id: nil)
-    @my_comments_to_comments = Comment.where(user_id: current_user.id, comment_id: !nil)
+    @my_comments_to_comments = Comment.where("user_id = ? and comment_id > 0", current_user.id)
   end
 
   def other_comments
-    @comments = Comment.joins(:post).where(posts.user_id: current_user.id)
+    
+  
   end
   
   def comment
@@ -83,5 +91,10 @@ class PostsController < ApplicationController
    def reply_params 
     params.require(:comment).
       permit(:user_id,:comment_id,:content)
+   end
+
+   def correct_user
+    @post = current_user.posts.find_by(id: params[:id])
+    redirect_to root_url if @post.nil?
    end
 end
