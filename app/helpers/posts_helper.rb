@@ -22,6 +22,10 @@ module PostsHelper
         Post.find(post_id)
     end
 
+    def get_comment(comment_id)
+        Comment.find(comment_id)
+    end
+
     def get_main_comment(post)
         post.comments.where("comment_id = ?", nil)
     end

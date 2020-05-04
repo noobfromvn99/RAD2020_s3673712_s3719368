@@ -68,8 +68,8 @@ class UsersController < ApplicationController
   end
 
   def other_comments
-    user_posts = current_user.posts
-    @comments = user_posts.comments
+    @comments = Comment.where(post_id: !nil)
+    @comments2 = Comment.where(post_id: nil)
   end
   
 

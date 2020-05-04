@@ -25,14 +25,17 @@
           <h5 class="post-title" style="margin: 30px 0 0 0!important">Recent posts</h5>         
                 <div class="container-fluid custom-display">   
                 <% Post.all.each do |post| %>
+                <% $i = 0 %>
+                
                 <% if @user == get_user(post.user_id) %>
                 <div class="row post-each">
                   <span class="display-title"><%= link_to post.title, post, class:"custom-highlight" %></span>
-                
+                   <% break if $i > 5 %>
+                   <% $i = $i + 1 %> 
                   <span style="float:right;display: inline-block;">
                   <%= post.created_at.strftime("%d-%m-%Y")%>
                   </span>
-                   
+                 
                 </div>
                 <% end %>
                 <% end %>        
