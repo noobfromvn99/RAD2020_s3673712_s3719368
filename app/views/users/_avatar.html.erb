@@ -1,3 +1,9 @@
 <br>
-<button name="Gravatar" > Gravatar</button> no larger than 2mb
+<%= form_for(current_user, url: avatar_upload_path, method: :patch ) do |f| %> 
+    <%= f.file_field :avatar%>
+    <%= f.submit "upload", class:"btn btn-primary"%>
+<%end%>
+
+
+no larger than 2mb
 

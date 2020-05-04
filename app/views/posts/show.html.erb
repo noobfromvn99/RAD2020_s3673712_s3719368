@@ -6,6 +6,7 @@
     <ul class="list-inline list-unstyled">
         <li>
             <span class="badge"><%= getTopic @post.topic_id%></span>
+            <%= image_tag get_avatar(get_user(@post.user_id)) %>
         </li>
         <li class="post-span-item">
             <i class="glyphicon glyphicon-eye-open"></i>
@@ -20,6 +21,10 @@
         <p>
             <%= link_to get_user(@post.user_id).name, get_user(@post.user_id), class:"post-a-username" %>       
             <span class="post-span-time" ><%= @post.created_at %></span>
+            <% if current_user?(@post.user)%>
+            <span class="post-span-time" ><%= link_to "Delete", @post, method: :delete,
+                                                                       data: { confirm: "You sure?"} %></span>
+            <%end%>
         </p>
     </div>
     <p class="post-p-content">

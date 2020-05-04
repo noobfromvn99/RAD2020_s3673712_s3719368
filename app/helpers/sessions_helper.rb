@@ -20,7 +20,11 @@ module SessionsHelper
     def logged_in?
         !current_user.nil?
     end
-        
+
+    def current_user?(user)
+        user==current_user
+    end
+    
     def log_out
         forget(current_user)
         session.delete(:user_id)
@@ -38,5 +42,13 @@ module SessionsHelper
 
     def forget(user)
         cookies.delete(:user_id)
+    end
+
+    def get_avatar(user)
+        if user.avatar?
+            user.avatar.url
+        else
+            'deafult-avatar.jpg'
+        end
     end
 end

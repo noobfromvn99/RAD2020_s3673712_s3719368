@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2020_05_02_143710) do
+ActiveRecord::Schema.define(version: 2020_05_03_132442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,8 +32,8 @@ ActiveRecord::Schema.define(version: 2020_05_02_143710) do
     t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id", null: false
-    t.bigint "topic_id", null: false
+    t.string "user_id"
+    t.bigint "topic_id"
     t.integer "viewed", default: 0
     t.string "picture"
     t.index ["topic_id"], name: "index_posts_on_topic_id"
@@ -58,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_05_02_143710) do
     t.datetime "reset_sent_at"
     t.string "city"
     t.string "bio"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
