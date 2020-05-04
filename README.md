@@ -16,4 +16,4 @@ Developed by Bach T Dao - s3673712 and Yongqian Huang s3719368
 * jbuilder
 * bcrypt
 ## Heroku link
-[Ruby-forum-rmit.herokuapp.com](Ruby-forum-rmit.herokuapp.com)
+[Ruby-forum-rmit.herokuapp.com](https://Ruby-forum-rmit.herokuapp.com)
