@@ -55,3 +55,14 @@ function display_reply(id){
         element.className == "reply-box"
     }
 }
+
+function user_setting_active(element){
+    var current_class = element.className;
+    if(current_class == "main-nav a"){
+        element.className = "";
+    }else{
+        element.className = "active";
+        var active = document.getElementsByClassName("main-nav a");
+        active[0].className = ""
+    }
+}
