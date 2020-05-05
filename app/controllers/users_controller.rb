@@ -59,17 +59,17 @@ class UsersController < ApplicationController
   end
 
   def my_posts
-    @my_posts = Post.where(user_id: current_user.id)
+    @my_posts = Post.paginate(page: params[:page], per_page: 5).where(user_id: current_user.id)
   end  
 
   def my_comments
-    @my_comments = Comment.where(user_id: current_user.id, comment_id: nil)
-    @my_comments_to_comments = Comment.where("user_id = ? and comment_id > 0", current_user.id)
+    @my_comments = Comment.paginate(page: params[:page], per_page: 3).where(user_id: current_user.id, comment_id: nil)
+    @my_comments_to_comments = Comment.paginate(page: params[:page], per_page: 3).where("user_id = ? and comment_id > 0", current_user.id)
   end
 
   def other_comments
-    @comments = Comment.where(post_id: !nil)
-    @comments2 = Comment.where(post_id: nil)
+    @comments = Comment.paginate(page: params[:page], per_page: 3).where(post_id: !nil)
+    @comments2 = Comment.paginate(page: params[:page], per_page: 3).where(post_id: nil)
   end
   
 

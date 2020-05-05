@@ -1,28 +1,35 @@
 <div class="col-sm-12">
-<p>Others comments to my posts</p>
-<p>
 
+
+<h4 class="card-title">Others comments to my posts</h4>
   <% @comments.each do |comment| %>
+  
       <div class="well" style="margin-bottom:5px;" >
         <div class="media">
-       
         <% if get_post(comment.post_id).user_id = current_user.id  %>
+          
           <div class="media-body">
-            <h4 class="media-heading long-title"><%= link_to comment.content,  class:"custom-highlight" %></h4>
-            <h4>to</h4>
-            <h4 class="media-heading long-title"><%= link_to get_post(comment.post_id).content,  class:"custom-highlight" %></h4>
+            <div class="col-sm-8">
+            <h4 class="media-heading long-title"><%= link_to get_user(comment.user_id).name, get_user(comment.user_id), class:"custom-highlight" %> commented "<%= comment.content %>"</h4>
+    
+            <h4 class="media-heading long-title">in <%= link_to get_post(comment.post_id).title, get_post(comment.post_id), class:"custom-highlight" %></h4>
+            </div>
+            <div class="col-sm-2" style="float:right">
+                <i class="glyphicon glyphicon-calendar"></i>
+                <%= comment.created_at %>
+            </div>
           </div>
         <% end %>
         </div>
       </div>
   <% end %> 
- </p> 
- <p>
+  <%= will_paginate @comments %>
+ 
 </div>
 
 <div class="col-sm-12">
-<p>Others comments to my comments</p>
-<p>
+
+<h4 class="card-title">Others comments to my comments</h4>
 
   <% @comments2.each do |comment| %>
       <div class="well" style="margin-bottom:5px;" >
@@ -30,16 +37,24 @@
        
         <% if get_comment(comment.comment_id).user_id = current_user.id  %>
           <div class="media-body">
-            <h4 class="media-heading long-title"><%= link_to comment.content,  class:"custom-highlight" %></h4>
-            <h4>to</h4>
-            <h4 class="media-heading long-title"><%= link_to get_comment(comment.comment_id).content,  class:"custom-highlight" %></h4>
+            <div class="col-sm-8">
+            <h4 class="media-heading long-title"><%= link_to get_user(comment.user_id).name, get_user(comment.user_id),  class:"custom-highlight" %> commented "<%= comment.content %>"</h4>
+            
+            <h4 class="media-heading long-title">to "<%= get_comment(comment.comment_id).content%>"</h4>
+            <h4 class="media-heading long-title">in <%= link_to get_post(get_comment(comment.comment_id).post_id).title, get_post(get_comment(comment.comment_id).post_id),  class:"custom-highlight" %></h4>
+            </div>
+            <div class="col-sm-2" style="float:right">
+                <i class="glyphicon glyphicon-calendar"></i>
+                <%= comment.created_at %>
+            </div>
           </div>
         <% end %>
         </div>
       </div>
   <% end %> 
- </p> 
- <p>
+  <%= will_paginate @comments2 %>
+  
+
 </div>
 
 
