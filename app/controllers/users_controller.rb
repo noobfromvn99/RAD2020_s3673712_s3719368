@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   layout :resolve_layout
   before_action :logged_in?, only: [:edit, :avatar]
+  include VerficationsHelper
 
   def new
     if logged_in?
@@ -64,6 +65,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def verfication
+    @verfication = Verfications.new
+    respond_to do |format|  
+      format.js
+    end
+  end
+  
     private
    def user_params
     params.require(:user).

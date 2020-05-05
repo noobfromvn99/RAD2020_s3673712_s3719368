@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   include PostsHelper
   before_action :logged_in?, only:[:create, :destroy]
- # before_action :correct_user, only: :destroy
+  before_action :correct_user, only: :destroy
   def new
     if logged_in?
       @user = current_user
