@@ -1,0 +1,34 @@
+  <%= form_for(@verfication = get_user_verfication(current_user), url: verfications_path, method: :patch)  do |f| %>
+  <%= render'shared/validate_error' %>
+    <div class="input-group mb-3" style="margin-bottom: 25px;margin-top: 25px;">
+        <div class="input-group-addon">
+            <span class="input-group-text">Type of card</span>
+        </div>
+        <%= f.text_field :fullname,  class: 'form-control', placeholder: 'Enter your full name',:required => true %>  
+        </div>
+        <div class="input-group mb-3" style="margin-bottom: 25px;">
+                <div class="input-group-addon">
+                    <span class="input-group-text">Card Number</span>
+                </div>
+                <%= f.number_field :cardnum,  class: 'form-control', placeholder: 'Please enter your student number',:required => true %>  
+            </div>
+
+            <%= f.file_field :card, id:"file-input", accept:'image/jpeg,image/gif,image/png'%>
+            <%= image_tag @verfication.card.url if @verfication.card?%>
+            <div class="row">
+                <div class="form-group">
+                <div class="col-sm-2">
+                <%= f.submit "Confirm" ,class: 'btn btn-success'%>
+                </div>
+                </div>
+            </div>
+<% end %> 
+
+
+<script type="text/javascript">
+  $('#file-input').bind('change',function() {varsize_in_megabytes=this.files[0].size/1024/1024;
+  if(size_in_megabytes > 2 ) {
+    alert('Maximum file size is 2MB. Please choose a smaller file.');
+    }
+  });
+</script>

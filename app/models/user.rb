@@ -18,6 +18,7 @@ class User < ApplicationRecord
                format: { with: VALID_MOBILE_REGEX } 
     has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
+    has_one  :verfication, dependent: :destroy
     #avatar
     mount_uploader :avatar, AvatarUploader
 

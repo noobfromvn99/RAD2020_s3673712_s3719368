@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'verfications/new'
   get 'password_resets/new'
   get 'password_resets/edit'
   root :to => "home#index"
@@ -26,9 +27,12 @@ Rails.application.routes.draw do
   post    '/reply', to: 'posts#create_reply'
   get     '/search', to: 'home#search_index'
   patch    '/avatar_upload', to: 'users#upload_avatar'
+  get       '/verification', to: 'users#verification'
+  patch      '/verfications', to: 'verfications#create'
   resources :users
   resources :posts
   resources :comments
-  resources :password_resets, only: [:new, :create, :edit, :update]##here
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :verfications, only:[:create, :show]
  # check home_controller
 end
