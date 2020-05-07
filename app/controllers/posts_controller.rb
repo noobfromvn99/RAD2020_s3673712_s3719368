@@ -37,20 +37,6 @@ class PostsController < ApplicationController
     @user = User.find(uid)
   end
 
-  def my_posts
-    @my_posts = Post.where(user_id: current_user.id)
-  end  
-
-  def my_comments
-    @my_comments = Comment.where(user_id: current_user.id, comment_id: nil)
-    @my_comments_to_comments = Comment.where("user_id = ? and comment_id > 0", current_user.id)
-  end
-
-  def other_comments
-    
-  
-  end
-  
   def comment
     @comment = Comment.create(comment_params)
     if @comment.save

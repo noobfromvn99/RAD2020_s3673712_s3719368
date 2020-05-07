@@ -2,7 +2,9 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container" style="width:80%">
-    <h1><%= @post.title %></h2>
+  
+    <h1 class="container-fluid" style="word-wrap: break-word; font-size:35px"><%= @post.title %></h1>
+   
     <ul class="list-inline list-unstyled">
         <li>
             <span class="badge"><%= getTopic @post.topic_id%></span>
@@ -27,7 +29,7 @@
             <%end%>
         </p>
     </div>
-    <p class="post-p-content">
+    <p class="post-p-content" style="word-wrap: break-word;">
         <%= @post.content %>
         <%= image_tag  @post.picture.url if @post.picture? %>
     </p>

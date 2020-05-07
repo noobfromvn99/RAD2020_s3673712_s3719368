@@ -8,8 +8,16 @@
     <h4 class="card-title"> Recent Members </h4>
     <p style="padding: 5px 15px 5px"> 
     <strong> 
-    <% get_recent_member.each do |user| %>
-        <a style="padding: 5px 15px 5px"><%= user.name %></a>
+    <% get_recent_member.limit(9).each do |user| %>
+        <div class="col-sm-4">
+        <%= link_to user do %>
+    		  <%= image_tag get_avatar(user),width:'100%',height:'102.667px' %>
+  		  <%end%>
+       
+        <h1 style="font-size:14px; margin:5px 0 10px">
+        <%= link_to user.name, user %>
+        </h1>
+        </div>
     <% end %>
     </strong>
     </p>
