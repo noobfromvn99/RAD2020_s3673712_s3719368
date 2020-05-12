@@ -28,8 +28,77 @@
          <span class="glyphicon glyphicon-picture"></span>
         </label>
         <%= f.file_field :picture, id:"file-input" ,accept:'image/jpeg,image/gif,image/png'%></i>
+    <%# RICH TEXT BOX %>
     </div>
-        <%= f.text_area :content,  class: 'form-control', :rows => 12, placeholder: 'Enter post content here' %>  
+<div class="toolbar">
+	<ul class="tool-list">
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command='justifyLeft'
+				class="tool--btn">
+				<i class='glyphicon glyphicon-align-left'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command='justifyCenter' 
+				class="tool--btn">
+				<i class='glyphicon glyphicon-align-center'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="bold" 
+				class="tool--btn">
+				<i class='glyphicon glyphicon-bold'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="italic"
+				class="tool--btn">
+				<i class='glyphicon glyphicon-italic'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="underline"
+				class="tool--btn">
+				<i class='glyphicon glyphicon-text-color'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="insertOrderedList"
+				class="tool--btn">
+				<i class='glyphicon glyphicon-sort-by-order'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="insertUnorderedList"
+				class="tool--btn">
+				<i class='glyphicon glyphicon-list'></i>
+			</button>
+		</li>
+		<li class="tool">
+			<button 
+				type="button" 
+				data-command="createlink" 
+				class="tool--btn">
+				<i class='glyphicon glyphicon-paperclip'></i>
+			</button>
+		</li>
+	</ul>
+</div>
+        <%= f.text_area :content,  class: 'form-control', id: 'content-output', :rows => 12, placeholder: 'Enter post content here' %>  
     </div>
 
     <div class="row">
@@ -54,4 +123,19 @@
     alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
+
+let output = document.getElementById('content-output');
+let buttons = document.getElementsByClassName('tool--btn');
+for (let btn of buttons) {
+	btn.addEventListener('click', () => {
+		let cmd = btn.dataset['command'];
+		if(cmd === 'createlink') {
+			let url = prompt("Enter the link here: ", "http:\/\/");
+			document.execCommand(cmd, false, url);
+		} else {
+			document.execCommand(cmd, false, null);
+		}
+	})
+}
+
 </script>
