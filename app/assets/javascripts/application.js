@@ -45,3 +45,24 @@ function selevt_nav_item(){
     var item = document.getElementById("topic_select");
     item.className = "nav-link active";
 }
+
+function display_reply(id){
+    var element = document.getElementById(id)
+    if(element.className == "reply-box"){
+        element.className = "display-reply-box"
+    }
+    else{
+        element.className == "reply-box"
+    }
+}
+
+function user_setting_active(element){
+    var current_class = element.className;
+    if(current_class == "main-nav a"){
+        element.className = "";
+    }else{
+        element.className = "active";
+        var active = document.getElementsByClassName("main-nav a");
+        active[0].className = ""
+    }
+}

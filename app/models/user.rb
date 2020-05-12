@@ -10,13 +10,17 @@ class User < ApplicationRecord
     before_save { self.email = self.email.downcase }
     has_secure_password
     #password validation
-    validates :password, presence: true, length: { minimum: 8, maximum: 20 }
+    validates :password, presence: true, length: { minimum: 8, maximum: 20 }, :if => :password
     #phone validation
     VALID_MOBILE_REGEX = /\d/
     validates :mobile, presence: true,
                length: { minimum:10},
                format: { with: VALID_MOBILE_REGEX } 
     has_many :posts, dependent: :destroy
+    has_many :comments, dependent: :destroy
+    has_one  :verfication, dependent: :destroy
+    #avatar
+    mount_uploader :avatar, AvatarUploader
 
     def self.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

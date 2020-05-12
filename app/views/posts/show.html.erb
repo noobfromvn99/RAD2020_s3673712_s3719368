@@ -1,10 +1,43 @@
 <% provide(:title , @post.title) %>
 <p id="notice"><%= notice %></p>
 
-<div class="media-body">
-    <h4 class="media-heading"> <%= @post.content%> </h4>
-    <p class="text-right"> <%= @user.name%> </p>
-    <p class="text-right"> Topic: <%= @topic%> </p>
-    <p><%= @post.content%></p>
-    <p><%= @post.viewed%></p>
+<div class="container" style="width:80%">
+  
+    <h1 class="container-fluid" style="word-wrap: break-word; font-size:35px"><%= @post.title %></h1>
+   
+    <ul class="list-inline list-unstyled">
+        <li>
+            <span class="badge"><%= getTopic @post.topic_id%></span>
+            <%= image_tag get_avatar(get_user(@post.user_id)) %>
+        </li>
+        <li class="post-span-item">
+            <i class="glyphicon glyphicon-eye-open"></i>
+            <%= @post.viewed %>
+        </li>
+                <li class="post-span-item">
+            <i class="glyphicon glyphicon-comment"></i>
+            <%= @post.comments.size %>
+        </li>
+    </ul>
+    <div class="well" style="padding-top: 15px; padding-bottom:5px ; margin-bottom: 0px">
+        <p>
+            <%= link_to get_user(@post.user_id).name, get_user(@post.user_id), class:"post-a-username" %>       
+            <span class="post-span-time" ><%= @post.created_at %></span>
+            <% if current_user?(@post.user)%>
+            <span class="post-span-time" ><%= link_to "Delete", @post, method: :delete,
+                                                                       data: { confirm: "You sure?"} %></span>
+            <%end%>
+        </p>
+    </div>
+    <p class="post-p-content" style="word-wrap: break-word;">
+        <%= @post.content %>
+        <%= image_tag  @post.picture.url if @post.picture? %>
+    </p>
+
+    <div class="post-span-comment">Comment</div>
+    <hr style="margin-top: 1px; margin-bottom:4px;">
+
+    <%= render partial:'comment' %>
+
+    <%= render partial:'list_comment' %>
 </div>

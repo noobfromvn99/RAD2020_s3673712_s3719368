@@ -18,4 +18,21 @@ module PostsHelper
         User.find(user_id)
     end
 
+    def get_post(post_id)
+        Post.find(post_id)
+    end
+
+    def get_post_comment(comment)
+        Post.all.each do |post|
+            post.comments.where("Post.comment_id = ?", comment.id)
+        end
+    end
+
+    def get_comment(comment_id)
+        Comment.find(comment_id)
+    end
+
+    def get_main_comment(post)
+        post.comments.where("comment_id = ?", nil)
+    end
 end

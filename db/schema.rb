@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_134114) do
+ActiveRecord::Schema.define(version: 2020_05_05_065701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.bigint "post_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "comment_id"
+    t.index ["comment_id"], name: "index_comments_on_comment_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
@@ -23,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_04_30_134114) do
     t.string "user_id", null: false
     t.bigint "topic_id", null: false
     t.integer "viewed", default: 0
+    t.string "picture"
     t.index ["topic_id"], name: "index_posts_on_topic_id"
   end
 
@@ -43,8 +56,24 @@ ActiveRecord::Schema.define(version: 2020_04_30_134114) do
     t.string "reset_digest"
     t.datetime "reset_sent_at"
     t.string "city"
+    t.string "bio"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  create_table "verfications", force: :cascade do |t|
+    t.string "fullname"
+    t.integer "cardnum"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "card"
+    t.index ["user_id"], name: "index_verfications_on_user_id"
+  end
+
+  add_foreign_key "comments", "comments"
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
   add_foreign_key "posts", "topics"
+  add_foreign_key "verfications", "users"
 end
