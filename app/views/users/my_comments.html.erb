@@ -7,7 +7,7 @@
         <div class="media">
           <div class="media-body">
             <div class="col-sm-8">
-            <h4 class="media-heading long-title"> You commented  "<%= comment.content %>"</h4>
+            <h4 class="media-heading long-title"> You commented  "<%= raw comment.content %>"</h4>
             <h4 class="media-heading long-title">to <%= link_to get_post(comment.post_id).title, get_post(comment.post_id), class:"custom-highlight" %></h4>
               </div>
               <div class="col-sm-2" style="float:right">
@@ -33,8 +33,8 @@
         <div class="media">
           <div class="media-body">
               <div class="col-sm-8">
-                <h4 class="media-heading long-title">You commented "<%= comment.content %>"</h4>
-                <h4 class="media-heading long-title">to "<%= get_comment(comment.comment_id).content %>"</h4>
+                <h4 class="media-heading long-title">You commented "<%= raw comment.content %>"</h4>
+                <h4 class="media-heading long-title">to "<%= raw get_comment(comment.comment_id).content %>"</h4>
                 <h4 class="media-heading long-title">in <%= link_to get_post(get_comment(comment.comment_id).post_id).title, get_post(get_comment(comment.comment_id).post_id), class:"custom-highlight" %></h4>
               </div>
               <div class="col-sm-2" style="float:right">

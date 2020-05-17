@@ -53,7 +53,7 @@
                 <% if @user.comments.exists? %>
                  <% @user.comments.limit(5).each do |comments| %>
                 <div class="row post-each">
-                  <span class="display-title"><%= link_to "#{comments.created_at} in sth comments: #{comments.content}", 'post', class:"custom-highlight" %></span>
+                  <span class="display-title"><%= raw comments.content%></span>
                   <span style="float:right;display: inline-block;">
                   <%= comments.created_at %>
                   </span>
