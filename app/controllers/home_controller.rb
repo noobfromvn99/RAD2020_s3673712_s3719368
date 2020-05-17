@@ -5,7 +5,6 @@ class HomeController < ApplicationController
 
   def index 
     id = params[:topic_id]
-
     if(id != nil)
       @posts = Post.where("topic_id = ?", id)
     else 

@@ -1,14 +1,10 @@
 class PostsController < ApplicationController
   include PostsHelper
-  before_action :logged_in?, only:[:create, :destroy]
+  before_action :logged_in?, only:[:new, :create, :destroy]
   before_action :correct_user, only: :destroy
   def new
-    if logged_in?
       @user = current_user
       @post = Post.new
-    else
-      redirect_to root_url
-    end
   end
 
   def create

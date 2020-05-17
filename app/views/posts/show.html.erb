@@ -30,8 +30,11 @@
         </p>
     </div>
     <p class="post-p-content" style="word-wrap: break-word;">
-        <%= @post.content %>
+        <div id="content">
+        <%= raw @post.content%> 
+        </div>
         <%= image_tag  @post.picture.url if @post.picture? %>
+        
     </p>
 
     <div class="post-span-comment">Comment</div>
@@ -41,3 +44,8 @@
 
     <%= render partial:'list_comment' %>
 </div>
+<script>
+
+
+
+</script>
