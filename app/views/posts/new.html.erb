@@ -1,7 +1,8 @@
 <% provide(:title ,"New post") %>
- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
  <script>
-   tinymce.init({
+   $(document).on('turbolinks:load', function () {
+   tinymce.remove();
+     tinymce.init({
      selector: '.tinymce',
      height: 500,
      menubar: false,
@@ -15,6 +16,8 @@
        ' alignright alignjustify | bullist numlist outdent indent | ' +
        ' removeformat | help'
    });
+});
+
  </script>
 <div class="post-container">
 
@@ -46,7 +49,7 @@
         </label>
         <%= f.file_field :picture, id:"file-input" ,accept:'image/jpeg,image/gif,image/png'%></i>
     </div>
-    <%= f.text_area :content, placeholder: 'Enter post content here', :class => "tinymce" %>
+    <%= f.text_area :content, placeholder: 'Enter post content here', class: "tinymce" %>
         
     </div>
 
@@ -72,4 +75,7 @@
     alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
+
+
+
 </script>
