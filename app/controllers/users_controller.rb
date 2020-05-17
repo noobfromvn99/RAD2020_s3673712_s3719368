@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   layout :resolve_layout
-  before_action :logged_in?, only: [:edit, :avatar]
+  before_action :logged_in_user?, only: [:edit, :avatar]
   include VerficationsHelper
 
   def new

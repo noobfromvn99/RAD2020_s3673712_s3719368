@@ -34,7 +34,6 @@
         <%= f.collection_select :topic_id, Topic.all,:id,:name,{}, {class: "form-control"} %>  
     </div>
 
-    <%= f.hidden_field :user_id, :value => @user.id %>
     <div class="input-group mb-3" style="margin-bottom: 25px;">
         <div class="input-group-addon">
           <span class="input-group-text">Title</span>

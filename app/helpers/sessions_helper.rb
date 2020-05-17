@@ -21,6 +21,14 @@ module SessionsHelper
         !current_user.nil?
     end
 
+    def logged_in_user?
+        if (current_user == nil) 
+            flash[:danger] = "Please login first"
+            redirect_to root_url
+        end
+        
+    end
+
     def current_user?(user)
         user==current_user
     end
