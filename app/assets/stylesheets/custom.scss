@@ -84,6 +84,10 @@ p {
   text-decoration: none;
 }
 
+.new_post {
+  margin-bottom: 30px;
+}
+
 /* footer */
 
 footer {
@@ -95,7 +99,7 @@ footer {
   color: $gray-light;
   font-weight: bold;
   text-align: center;
-  height: 4%;
+  height: 2.5rem;
 }
 .footer-copyright {
   margin-top: 12px;
@@ -306,6 +310,7 @@ ul.list-group:after {
 .post-container {
   margin-left: 40px;
   margin-right: 20px;
+  overflow-y: scroll;
 }
 .post-title {
   border-left: 5px solid green;
