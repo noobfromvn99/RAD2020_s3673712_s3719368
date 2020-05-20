@@ -15,6 +15,10 @@ Developed by Bach T Dao - s3673712 and Yongqian Huang s3719368
 * turbolinks
 * jbuilder
 * bcrypt
+
+## Highest Attempt
+90+ level
+
 ## Heroku link
 [Ruby-forum-rmit.herokuapp.com](https://Ruby-forum-rmit.herokuapp.com)
 
