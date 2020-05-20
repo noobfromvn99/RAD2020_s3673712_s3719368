@@ -1,7 +1,8 @@
 # Ruby Forum
 
-Developed by Bach T Dao - s3673712 and Yongqian Huang s3719368
-UoooBarry, HuahuaRen are Yongqian Huang's account.
+Developed by Bach T Dao - s3673712 and Yongqian Huang s3719368<br>
+UoooBarry, HuahuaRen are Yongqian Huang's account.<br>
+Homy and NoobFromVn99 are Bach T Dao's account
 
 ## System dependencies
 * Ruby version: 2.5.7
@@ -25,3 +26,6 @@ UoooBarry, HuahuaRen are Yongqian Huang's account.
 
 ## Toggl link
 [Toggl](https://toggl.com/app/4218286/projects/160185196/team)
+
+## Git repository
+[RAD2020_s3673712_s3719368](https://github.com/noobfromvn99/RAD2020_s3673712_s3719368)
