@@ -1,6 +1,7 @@
 # Ruby Forum
 
 Developed by Bach T Dao - s3673712 and Yongqian Huang s3719368
+UoooBarry, HuahuaRen are Yongqian Huang's account.
 
 ## System dependencies
 * Ruby version: 2.5.7
