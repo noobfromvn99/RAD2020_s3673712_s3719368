@@ -6,5 +6,5 @@ class Post < ApplicationRecord
     has_many :comments, dependent: :destroy
     mount_uploader :picture, PictureUploader
 
-    default_scope -> { order(created_at: :desc)}
+    default_scope -> { order(created_at: :asc)}
 end
