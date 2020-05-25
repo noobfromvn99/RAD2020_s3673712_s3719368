@@ -14,7 +14,7 @@ class User < ApplicationRecord
     #phone validation
     VALID_MOBILE_REGEX = /\d/
     validates :mobile, presence: true,
-               length: { minimum:10},
+               length: { minimum:10, maximum: 13},
                format: { with: VALID_MOBILE_REGEX } 
     has_many :posts, dependent: :destroy
     has_many :comments, dependent: :destroy
