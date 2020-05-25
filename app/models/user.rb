@@ -22,7 +22,7 @@ class User < ApplicationRecord
     #avatar
     mount_uploader :avatar, AvatarUploader
 
-    default_scope -> { order(created_at: :asc)}
+    default_scope -> { order(created_at: :desc)}
 
     def self.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
