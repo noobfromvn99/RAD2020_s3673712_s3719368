@@ -9,10 +9,13 @@
             <div class="col-sm-8">
             <h4 class="media-heading long-title"> You commented  "<%= raw comment.content %>"</h4>
             <h4 class="media-heading long-title">to <%= link_to get_post(comment.post_id).title, get_post(comment.post_id), class:"custom-highlight" %></h4>
+            
               </div>
               <div class="col-sm-2" style="float:right">
                 <i class="glyphicon glyphicon-calendar"></i>
                 <%= comment.created_at %>
+                <span class="post-span-time" style="float:right" ><%= link_to "Delete", comment, method: "delete",
+                                                                       data: { confirm: "You sure?"} %></span>
               </div>
           </div>
         </div>
@@ -40,6 +43,8 @@
               <div class="col-sm-2" style="float:right">
                 <i class="glyphicon glyphicon-calendar"></i>
                 <%= comment.created_at %>
+                 <span class="post-span-time" style="float:right" ><%= link_to "Delete", comment, method: "delete",
+                                                                       data: { confirm: "You sure?"} %></span>
               </div>
           </div>
         </div>

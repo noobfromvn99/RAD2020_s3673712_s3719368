@@ -23,6 +23,8 @@
                 <i class="glyphicon glyphicon-eye-open"></i>
                 <%= post.viewed %>
               </li>
+              <span class="post-span-time" style="float:right" ><%= link_to "Delete", post, method: "delete",
+                                                                       data: { confirm: "You sure?"} %></span>
             </ul>
           </div>
         </div>
