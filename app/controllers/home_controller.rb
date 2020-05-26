@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   include PostsHelper
   include HomeHelper
   @@topic_array ||= []
-
+  
   def index 
     id = params[:topic_id]
     if(id != nil)
