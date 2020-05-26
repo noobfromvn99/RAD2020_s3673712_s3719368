@@ -1,12 +1,13 @@
 <br>
 <%= form_for(current_user, url: avatar_upload_path, method: :patch ) do |f| %> 
     <%= f.file_field :avatar, id:"file-input", accept:'image/jpeg,image/gif,image/png'%>
+    no larger than 2mb
     <%= f.submit "upload", class:"btn btn-primary"%>
-    <%= image_tag image_tag get_avatar(current_user) %>
+    <%= image_tag get_avatar(current_user) %>
 <%end%>
 
 
-no larger than 2mb
+
 
 
 <script type="text/javascript">
