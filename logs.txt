@@ -1,0 +1,463 @@
+-----> Ruby app detected
+-----> Installing bundler 1.17.3
+-----> Removing BUNDLED WITH version in the Gemfile.lock
+-----> Compiling Ruby/Rails
+-----> Using Ruby version: ruby-2.5.7
+-----> Installing dependencies using bundler 1.17.3
+       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+       Your Gemfile lists the gem pg (< 2.0, >= 0.18) more than once.
+       You should probably keep only one of them.
+       Remove any duplicate entries and specify the gem only once (per group).
+       While it's not a problem now, it could cause errors if you change the version of one of them later.
+       Your Gemfile lists the gem jquery-rails (>= 0) more than once.
+       You should probably keep only one of them.
+       Remove any duplicate entries and specify the gem only once (per group).
+       While it's not a problem now, it could cause errors if you change the version of one of them later.
+       The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+       Using rake 13.0.1
+       Using CFPropertyList 2.3.6
+       Using concurrent-ruby 1.1.6
+       Using i18n 1.8.2
+       Using minitest 5.14.0
+       Using thread_safe 0.3.6
+       Using tzinfo 1.2.7
+       Using activesupport 5.2.4.2
+       Using builder 3.2.4
+       Using erubi 1.9.0
+       Using mini_portile2 2.4.0
+       Using nokogiri 1.10.9
+       Using rails-dom-testing 2.0.3
+       Using crass 1.0.6
+       Using loofah 2.5.0
+       Using rails-html-sanitizer 1.3.0
+       Using actionview 5.2.4.2
+       Using rack 2.2.2
+       Using rack-test 1.1.0
+       Using actionpack 5.2.4.2
+       Using nio4r 2.5.2
+       Using websocket-extensions 0.1.4
+       Using websocket-driver 0.7.1
+       Using actioncable 5.2.4.2
+       Using globalid 0.4.2
+       Using activejob 5.2.4.2
+       Using mini_mime 1.0.2
+       Using mail 2.7.1
+       Using actionmailer 5.2.4.2
+       Using activemodel 5.2.4.2
+       Using arel 9.0.0
+       Using activerecord 5.2.4.2
+       Using mimemagic 0.3.5
+       Using marcel 0.3.3
+       Using activestorage 5.2.4.2
+       Using public_suffix 4.0.5
+       Using addressable 2.7.0
+       Using execjs 2.7.0
+       Using autoprefixer-rails 9.7.6
+       Using bcrypt 3.1.12
+       Using msgpack 1.3.3
+       Using bootsnap 1.4.6
+       Using rb-fsevent 0.10.4
+       Using ffi 1.12.2
+       Using rb-inotify 0.10.1
+       Using sass-listen 4.0.0
+       Using sass 3.7.4
+       Using bootstrap-sass 3.3.7
+       Using bundler 1.17.3
+       Using mini_magick 4.10.1
+       Using ruby-vips 2.0.17
+       Using image_processing 1.10.3
+       Using carrierwave 2.1.0
+       Using coffee-script-source 1.12.2
+       Using coffee-script 2.4.1
+       Using method_source 1.0.0
+       Using thor 1.0.1
+       Using railties 5.2.4.2
+       Using coffee-rails 4.2.2
+       Using declarative 0.0.10
+       Using declarative-option 0.1.0
+       Using unf_ext 0.0.7.7
+       Using unf 0.1.4
+       Using domain_name 0.5.20190701
+       Using dry-inflector 0.2.0
+       Using excon 0.73.0
+       Using multipart-post 2.1.1
+       Using faraday 0.17.3
+       Using fission 0.5.0
+       Using formatador 0.2.5
+       Using mime-types-data 3.2020.0425
+       Using mime-types 3.3.1
+       Using fog-core 2.2.0
+       Using multi_json 1.14.1
+       Using fog-json 1.2.0
+       Using ipaddress 0.8.3
+       Using xml-simple 1.1.5
+       Using fog-aliyun 0.3.10
+       Using fog-xml 0.1.3
+       Using fog-atmos 0.1.0
+       Using fog-aws 3.6.3
+       Using fog-brightbox 0.16.1
+       Using fog-cloudatcost 0.4.0
+       Using fog-cloudstack 0.1.0
+       Using fog-digitalocean 0.4.0
+       Using fog-dnsimple 2.1.0
+       Using fog-dynect 0.0.3
+       Using fog-ecloud 0.3.0
+       Using jwt 2.2.1
+       Using memoist 0.16.2
+       Using os 1.1.0
+       Using signet 0.14.0
+       Using googleauth 0.6.7
+       Using httpclient 2.8.3
+       Using uber 0.1.0
+       Using representable 3.0.4
+       Using retriable 3.1.2
+       Using google-api-client 0.23.9
+       Using fog-google 1.7.1
+       Using fog-internet-archive 0.0.1
+       Using fog-local 0.6.0
+       Using fog-openstack 1.0.10
+       Using json 2.3.0
+       Using ovirt-engine-sdk 4.4.0
+       Using http-accept 1.7.0
+       Using http-cookie 1.0.3
+       Using netrc 0.11.0
+       Using rest-client 2.1.0
+       Using rbovirt 0.1.7
+       Using fog-ovirt 1.2.4
+       Using fog-powerdns 0.2.0
+       Using fog-profitbricks 0.0.5
+       Using fog-rackspace 0.1.6
+       Using fog-radosgw 0.0.5
+       Using fog-riakcs 0.1.0
+       Using fog-sakuracloud 1.7.5
+       Using fog-serverlove 0.1.2
+       Using fog-softlayer 1.1.4
+       Using fog-storm_on_demand 0.1.1
+       Using fog-terremark 0.1.0
+       Using fog-vmfusion 0.1.0
+       Using fog-voxel 0.1.0
+       Using optimist 3.0.1
+       Using rbvmomi 2.4.1
+       Using fog-vsphere 3.3.0
+       Using xmlrpc 0.3.0
+       Using fog-xenserver 1.0.0
+       Using fog 2.2.0
+       Using jbuilder 2.10.0
+       Using jquery-rails 4.4.0
+       Using js_cookie_rails 2.2.0
+       Using pg 1.2.3
+       Using puma 3.12.4
+       Using sprockets 3.7.2
+       Using sprockets-rails 3.2.1
+       Using rails 5.2.4.2
+       Using rails-controller-testing 1.0.4
+       Using rails-ujs 0.1.0
+       Using tilt 2.0.10
+       Using sass-rails 5.1.0
+       Using turbolinks-source 5.2.0
+       Using turbolinks 5.2.1
+       Using uglifier 4.2.0
+       Using will_paginate 3.1.8
+       Using will_paginate-bootstrap 1.0.2
+       Bundle complete! 31 Gemfile dependencies, 145 gems now installed.
+       Gems in the groups development and test were not installed.
+       Bundled gems are installed into `./vendor/bundle`
+       Bundle completed (0.56s)
+       Cleaning up the bundler cache.
+       Your Gemfile lists the gem pg (< 2.0, >= 0.18) more than once.
+       You should probably keep only one of them.
+       Remove any duplicate entries and specify the gem only once (per group).
+       While it's not a problem now, it could cause errors if you change the version of one of them later.
+       Your Gemfile lists the gem jquery-rails (>= 0) more than once.
+       You should probably keep only one of them.
+       Remove any duplicate entries and specify the gem only once (per group).
+       While it's not a problem now, it could cause errors if you change the version of one of them later.
+       The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+-----> Installing node-v10.15.3-linux-x64
+-----> Detecting rake tasks
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       [fog][DEPRECATION] Unable to load Fog::Atmos::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Atmos. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Clodo::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Clodo. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::DigitalOcean::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::DigitalOcean. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Dnsimple::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Dnsimple. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::DNSMadeEasy::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::DNSMadeEasy. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Fogdocker::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Fogdocker. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Dreamhost::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Dreamhost. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Dynect::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Dynect. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Ecloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Ecloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Glesys::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Glesys. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::GoGrid::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::GoGrid. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Google::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Google. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Google::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Google. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Google::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Google. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::IBM::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::IBM. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::IBM::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::IBM. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::InternetArchive::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::InternetArchive. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Linode::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Linode. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Linode::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Linode. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::BareMetalCloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::BareMetalCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::CDN
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::CDN::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::CDN v2
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::CDN v2::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Compute v2
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute v2::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Databases
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Databases::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rage4::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Rage4. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::PowerDNS::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::PowerDNS. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::ProfitBricks::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::ProfitBricks. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::Volume
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Volume::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::Network
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Network::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Serverlove::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Serverlove. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Account
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Account::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Network
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Network::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Network
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Network::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Billing
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Billing::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Monitoring
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Monitoring::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Support
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Support::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Account
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Account::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::VPN
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::VPN::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Vcloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Vcloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::VcloudDirector::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::VcloudDirector. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Vmfusion::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Vmfusion. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Voxel::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Voxel. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::CloudSigma::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::CloudSigma. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Openvz::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Openvz. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::OpenNebula::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::OpenNebula. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Aliyun::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Aliyun. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Aliyun::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Aliyun. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       Yarn executable was not detected in the system.
+       Download Yarn at https://yarnpkg.com/en/docs/install
+       I, [2020-05-20T15:17:39.708056 #279]  INFO -- : Writing /tmp/build_dbba1b73033aec947143f2b5603b5f30/public/assets/application-fa8410b2ca49050b54c716ba93621a66be44e2f85794f143ce24e5f7410c79cb.css
+       I, [2020-05-20T15:17:39.708948 #279]  INFO -- : Writing /tmp/build_dbba1b73033aec947143f2b5603b5f30/public/assets/application-fa8410b2ca49050b54c716ba93621a66be44e2f85794f143ce24e5f7410c79cb.css.gz
+       Asset precompilation completed (8.90s)
+       Cleaning assets
+       Running: rake assets:clean
+       [fog][DEPRECATION] Unable to load Fog::Atmos::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Atmos. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Clodo::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Clodo. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::DigitalOcean::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::DigitalOcean. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Dnsimple::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Dnsimple. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::DNSMadeEasy::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::DNSMadeEasy. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Fogdocker::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Fogdocker. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Dreamhost::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Dreamhost. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Dynect::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Dynect. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Ecloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Ecloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Glesys::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Glesys. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::GoGrid::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::GoGrid. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Google::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Google. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Google::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Google. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Google::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Google. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::IBM::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::IBM. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::IBM::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::IBM. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::InternetArchive::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::InternetArchive. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Linode::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Linode. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Linode::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Linode. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::BareMetalCloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::BareMetalCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::CDN
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::CDN::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::CDN v2
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::CDN v2::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Compute v2
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute v2::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rackspace::Databases
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Databases::Rackspace. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Rage4::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Rage4. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::PowerDNS::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::PowerDNS. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::ProfitBricks::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::ProfitBricks. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::Volume
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Volume::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::Network
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Network::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::SakuraCloud::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::SakuraCloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Serverlove::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Serverlove. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Account
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Account::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Network
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Network::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Softlayer::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Softlayer. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Network
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Network::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::DNS
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::DNS::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Billing
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Billing::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Monitoring
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Monitoring::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Support
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Support::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::Account
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Account::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::StormOnDemand::VPN
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::VPN::StormOnDemand. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Vcloud::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Vcloud. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::VcloudDirector::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::VcloudDirector. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Vmfusion::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Vmfusion. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Voxel::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Voxel. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::CloudSigma::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::CloudSigma. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Openvz::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Openvz. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::OpenNebula::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::OpenNebula. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Aliyun::Compute
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Compute::Aliyun. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       [fog][DEPRECATION] Unable to load Fog::Aliyun::Storage
+       [fog][DEPRECATION] Falling back to deprecated constant Fog::Storage::Aliyun. The preferred format of service provider constants has changed from service::provider to provider::service. Please update this service provider to use the preferred format.
+       I, [2020-05-20T15:17:41.740455 #290]  INFO -- : Removed application-345575c03d34c4999edf2bae06ececf11af03e17000b5a6fbb55c6ebd5af84f9.css
+-----> Detecting rails configuration
+###### WARNING:
+       You set your `config.active_storage.service` to :local in production.
+       If you are uploading files to this app, they will not persist after the app
+       is restarted, on one-off dynos, or if the app has multiple dynos.
+       Heroku applications have an ephemeral file system. To
+       persist uploaded files, please use a service such as S3 and update your Rails
+       configuration.
+       
+       For more information can be found in this article:
+         https://devcenter.heroku.com/articles/active-storage-on-heroku
+       
+###### WARNING:
+       We detected that some binary dependencies required to
+       use all the preview features of Active Storage are not
+       present on this system.
+       
+       For more information please see:
+         https://devcenter.heroku.com/articles/active-storage-on-heroku
+       
+###### WARNING:
+       There is a more recent Ruby version available for you to use:
+       
+       2.5.8
+       
+       The latest version will include security and bug fixes, we always recommend
+       running the latest version of your minor release.
+       
+       Please upgrade your Ruby version.
+       
+       For all available Ruby versions see:
+         https://devcenter.heroku.com/articles/ruby-support#supported-runtimes
+###### WARNING:
+       No Procfile detected, using the default web server.
+       We recommend explicitly declaring how to boot your server process via a Procfile.
+       https://devcenter.heroku.com/articles/ruby-default-web-server
+-----> Discovering process types
+       Procfile declares types     -> (none)
+       Default types for buildpack -> console, rake, web
+-----> Compressing...
+       Done: 50.8M
+-----> Launching...
+       Released v21
+       https://ruby-forum-rmit.herokuapp.com/ deployed to Heroku
