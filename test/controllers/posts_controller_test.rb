@@ -16,6 +16,6 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
                                         password:'password'} }
     assert_template root_path
     get newpost_path
-    assert_response :success
+    assert_response :found
   end
 end

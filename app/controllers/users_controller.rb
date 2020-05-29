@@ -63,6 +63,7 @@ class UsersController < ApplicationController
     @my_posts = Post.paginate(page: params[:page], per_page: 5).where(user_id: current_user.id)
   end  
 
+
   def my_comments
     @my_comments = Comment.paginate(page: params[:page], per_page: 3).where(user_id: current_user.id, comment_id: nil)
     @my_comments_to_comments = Comment.paginate(page: params[:page], per_page: 3).where("user_id = ? and comment_id > 0", current_user.id)

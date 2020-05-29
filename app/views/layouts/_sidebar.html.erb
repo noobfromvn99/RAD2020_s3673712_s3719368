@@ -44,7 +44,7 @@
 <div class="card">
     <div class="card-body">
     <h4 class="card-title"> Post </h4>
-    <% get_most_viewed_post.each do |post| %> 
+    <% Post.order_by_viewed.limit(5).each do |post| %> 
         <h4 class="media-heading side-heading"><%= link_to post.title, post  , class:"custom-highlight"%></h4>
     <% end %>
     </div>

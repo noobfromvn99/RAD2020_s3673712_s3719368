@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   include PostsHelper
   include HomeHelper
   @@topic_array ||= []
-
+  
   def index 
     id = params[:topic_id]
     if(id != nil)
@@ -31,7 +31,7 @@ class HomeController < ApplicationController
 
   def filter_index #showing mutiple topic in index
     @filter_posts = []
-    Post.all.each do |post|
+    Post.order(created_at: :desc).each do |post|
       if @@topic_array.include?(getTopic(post.topic_id))
         @filter_posts.push(post)
       end
